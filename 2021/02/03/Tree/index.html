@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>树与二叉树 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="树树的数据类型 结点：数据元素+若干指向子树的分支  &#x3D;&#x3D;结点的度&#x3D;&#x3D;：分支的个数  &#x3D;&#x3D;树的度&#x3D;&#x3D;：树中所有结点的度的最大值  叶子结点：deg&#x3D;0的结点  分支节点：deg&gt;0的结点  &#x3D;&#x3D;结点的层次&#x3D;&#x3D;：假设根结点的层次为1，第n层的结点的子树根结点的层次为n+1  树的深度：结点所在的最大层次，空树depth&#x3D;0，只有根节点的树depth&#x3D;1   二叉树的性质 对任何一棵二叉树，若它">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树与二叉树">
+<meta property="og:url" content="http://example.com/2021/02/03/Tree/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="树树的数据类型 结点：数据元素+若干指向子树的分支  &#x3D;&#x3D;结点的度&#x3D;&#x3D;：分支的个数  &#x3D;&#x3D;树的度&#x3D;&#x3D;：树中所有结点的度的最大值  叶子结点：deg&#x3D;0的结点  分支节点：deg&gt;0的结点  &#x3D;&#x3D;结点的层次&#x3D;&#x3D;：假设根结点的层次为1，第n层的结点的子树根结点的层次为n+1  树的深度：结点所在的最大层次，空树depth&#x3D;0，只有根节点的树depth&#x3D;1   二叉树的性质 对任何一棵二叉树，若它">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-02-03T01:56:07.000Z">
+<meta property="article:modified_time" content="2021-02-03T02:11:06.827Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="数据结构">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Tree" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/02/03/Tree/" class="article-date">
+  <time class="dt-published" datetime="2021-02-03T01:56:07.000Z" itemprop="datePublished">2021-02-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      树与二叉树
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h2 id="树的数据类型"><a href="#树的数据类型" class="headerlink" title="树的数据类型"></a>树的数据类型</h2><ul>
+<li><p>结点：数据元素+若干指向子树的分支</p>
+</li>
+<li><p>==结点的度==：分支的个数</p>
+</li>
+<li><p>==树的度==：树中所有结点的度的最大值</p>
+</li>
+<li><p>叶子结点：deg=0的结点</p>
+</li>
+<li><p>分支节点：deg&gt;0的结点</p>
+</li>
+<li><p>==结点的层次==：假设根结点的层次为1，第n层的结点的子树根结点的层次为n+1</p>
+</li>
+<li><p>树的深度：结点所在的最大层次，空树depth=0，只有根节点的树depth=1</p>
+</li>
+</ul>
+<h2 id="二叉树的性质"><a href="#二叉树的性质" class="headerlink" title="二叉树的性质"></a>二叉树的性质</h2><ol>
+<li><p>对任何一棵二叉树，若它含$n_0$ 个叶子结点;</p>
+<p>$n_2$个度为2的结点，则必存在关系式：</p>
+<p>$n_0=n_2+1$</p>
+<p>Prove:</p>
+<p>$n_{sum}=n_0+n_1+n_2$</p>
+<p>$分支数b=n_0+2n_2$</p>
+<p>$b=n_{sum}-1$</p>
+</li>
+<li><p>具有n个结点的完全二叉树的深度为$[log_2n]+1$</p>
+</li>
+</ol>
+<h2 id="满二叉树与完全二叉树"><a href="#满二叉树与完全二叉树" class="headerlink" title="满二叉树与完全二叉树"></a>满二叉树与完全二叉树</h2><p>一棵深度为k且有2的k次方减1个结点的二叉树是==满二叉树==。<br>深度为k的，有n个结点的二叉树，当且仅当其每一个结点都与深度为k的满二叉树中编号从1至n的结点一一对应时，称为==完全二叉树==</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">         1                                1</span><br><span class="line">      &#x2F;     \                          &#x2F;      \</span><br><span class="line">    2        3                        2         3</span><br><span class="line"> &#x2F;    \    &#x2F;    \                  &#x2F;     \</span><br><span class="line">4      5  6      7               4         5</span><br><span class="line">  满二叉树                              完全二叉树</span><br></pre></td></tr></table></figure>
+
+<p>节点数和深度的关系 $n=2^k-1$</p>
+<p>第i层上的节点数为$2^{i-1}$</p>
+<p>​        给所有的节点编号（从1号开始而不是从零号开始）那没对于一个编号为i的节点我们可以根据i的大小，判断出他是左节点还是右节点，父节点是谁，子节点是谁。比如我们给一个编号13的节点，那么他是基数所以他是右节点，因为节点的左右变化和数据的基偶性是同步变化的。他的父节点是13/2=6(是从1好开始的)他的左子节点是13<em>2=26右子节点是13</em>2+1=27同理还可以求他的兄弟节点，父节点的父节点</p>
+<p>​        总而言这在满二叉树中只要有了一个节点的编号那么他在整个二叉树中的位置就确定了，正是由于这个原因，我们更倾向于使用==顺序结构==而不是链式结构来存储满二叉树。</p>
+<h2 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h2><h3 id="中序遍历的非递归描述"><a href="#中序遍历的非递归描述" class="headerlink" title="中序遍历的非递归描述"></a>中序遍历的非递归描述</h3><ol>
+<li><p>设置指针p指向当前节点，初始时指向根结点；</p>
+</li>
+<li><p>循环：条件：当p非空或堆栈非空</p>
+<ol>
+<li>如果节点p非空，则将节点<br> p压入堆栈；然后进入p的左子<br> 树p=p-&gt; Child</li>
+<li>如果节点p为空，则从栈中<br> 取出一个节点Pop(S,p)访问<br> 然后进入p的右子树<br> p=p-&gt;rchild;</li>
+</ol>
+</li>
+</ol>
+<h2 id="线索链表"><a href="#线索链表" class="headerlink" title="线索链表"></a>线索链表</h2><p>左空指针指向前驱</p>
+<p>右空指针指向后继</p>
+<h3 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for ( p &#x3D;firstNode(T); p;p &#x3D; Succ(p))</span><br><span class="line"></span><br><span class="line">   Visit (p-&gt;data);</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>中序遍历的第一个结点 ？</li>
+</ol>
+<p>左子树上处于“最左下”（没有左子树）的结点。</p>
+<ol start="2">
+<li>在中序线索化链表中结点的后继 ？</li>
+</ol>
+<p>若没有右子树，为后继线索所指结点。</p>
+<p>否则为对其右子树进行中序遍历时访问的第一个结点；</p>
+<h2 id="树与二叉树转换"><a href="#树与二叉树转换" class="headerlink" title="树与二叉树转换"></a>树与二叉树转换</h2><p>树的二叉链表表示法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">typedef struct CSNode&#123;</span><br><span class="line"></span><br><span class="line">   Elem     data;</span><br><span class="line"></span><br><span class="line">   struct CSNode *firstchild, *nextsibling;</span><br><span class="line"></span><br><span class="line">&#125; CSNode, *CSTree;</span><br></pre></td></tr></table></figure>
+
+<h3 id="森林与二叉树"><a href="#森林与二叉树" class="headerlink" title="森林与二叉树"></a>森林与二叉树</h3><p>将树根看做兄弟</p>
+<h3 id="树的遍历"><a href="#树的遍历" class="headerlink" title="树的遍历"></a>树的遍历</h3><table>
+<thead>
+<tr>
+<th align="left">树</th>
+<th align="left">二叉树</th>
+<th>森林</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">先序遍历</td>
+<td align="left">先序遍历</td>
+<td>先序遍历</td>
+</tr>
+<tr>
+<td align="left">后序遍历</td>
+<td align="left">中序遍历</td>
+<td>中序遍历</td>
+</tr>
+</tbody></table>
+<h3 id="森林的遍历"><a href="#森林的遍历" class="headerlink" title="森林的遍历"></a>森林的遍历</h3><ol>
+<li><p>第一棵树的根结点；</p>
+</li>
+<li><p>第一棵树的子树森林；</p>
+</li>
+<li><p>其它(除第一棵树外的)树构成的森林。</p>
+</li>
+</ol>
+<h2 id="霍夫曼树"><a href="#霍夫曼树" class="headerlink" title="霍夫曼树"></a>霍夫曼树</h2><p>权值低，深</p>
+<p>找权值最低两个节点构造二叉树，root为权值和，直至没有独立节点</p>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ol>
+<li>正则，没有deg=1的节点</li>
+<li>$2n_0-1$个节点</li>
+</ol>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>霍夫曼编码，最短前缀编码</p>
+<p>频率为权值，构造霍夫曼树</p>
+<p>左路径为0，右路径为1</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/02/03/Tree/" data-id="cklm1tbgq0000nouc43ji6mp5" data-title="树与二叉树" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/02/26/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/02/03/array/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">数组</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/02/26/%E7%9B%B8%E6%9C%BA%E6%A8%A1%E5%9E%8B/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/26/c++%E4%B8%8EOOP/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/03/Tree/">树与二叉树</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/03/array/">数组</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

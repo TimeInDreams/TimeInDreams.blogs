@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>查找 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="查找静态查找表时间性能分析 ASL$ASL&#x3D;\sum_{i&#x3D;1}^{n}P_iC_i$ $\sum P_i&#x3D;1$ $P_i:查找到第i个字符的概率$ $C_i查找成功时比较过的次数$ eg： 顺序查找 算法的ASL&#x3D; 查找成功的ASL+查找失败的ASL 有序表折半查找，缩小区间 折半查找判定树 长度为10的折半查找判定树的具体生成过程：&#x3D;&#x3D;左孩子结点&lt;根结点&lt;右孩子结点&#x3D;&#x3D; (1)在长">
+<meta property="og:type" content="article">
+<meta property="og:title" content="查找">
+<meta property="og:url" content="http://example.com/2021/02/03/search/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="查找静态查找表时间性能分析 ASL$ASL&#x3D;\sum_{i&#x3D;1}^{n}P_iC_i$ $\sum P_i&#x3D;1$ $P_i:查找到第i个字符的概率$ $C_i查找成功时比较过的次数$ eg： 顺序查找 算法的ASL&#x3D; 查找成功的ASL+查找失败的ASL 有序表折半查找，缩小区间 折半查找判定树 长度为10的折半查找判定树的具体生成过程：&#x3D;&#x3D;左孩子结点&lt;根结点&lt;右孩子结点&#x3D;&#x3D; (1)在长">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="file://C:/Users/GK/Documents/Gridea/post-images/1611764409117.webp">
+<meta property="og:image" content="file://C:/Users/GK/Documents/Gridea/post-images/1611764430380.webp">
+<meta property="og:image" content="file://C:/Users/GK/Documents/Gridea/post-images/1611764454716.webp">
+<meta property="article:published_time" content="2021-02-03T01:56:07.000Z">
+<meta property="article:modified_time" content="2021-02-03T02:12:43.159Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="数据结构">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="file://C:/Users/GK/Documents/Gridea/post-images/1611764409117.webp">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-search" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/02/03/search/" class="article-date">
+  <time class="dt-published" datetime="2021-02-03T01:56:07.000Z" itemprop="datePublished">2021-02-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      查找
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><h2 id="静态查找表"><a href="#静态查找表" class="headerlink" title="静态查找表"></a>静态查找表</h2><h3 id="时间性能分析-ASL"><a href="#时间性能分析-ASL" class="headerlink" title="时间性能分析 ASL"></a>时间性能分析 ASL</h3><p>$ASL=\sum_{i=1}^{n}P_iC_i$</p>
+<p>$\sum P_i=1$</p>
+<p>$P_i:查找到第i个字符的概率$</p>
+<p>$C_i查找成功时比较过的次数$</p>
+<p>eg：</p>
+<p>顺序查找</p>
+<p>算法的ASL= 查找成功的ASL+查找失败的ASL</p>
+<h3 id="有序表"><a href="#有序表" class="headerlink" title="有序表"></a>有序表</h3><p>折半查找，缩小区间</p>
+<p>折半查找判定树</p>
+<p>长度为10的折半查找判定树的具体生成过程：<br>==左孩子结点&lt;根结点&lt;右孩子结点==<br> (1)在长度为10的有序表中进行折半查找，不论查找哪个记录，都必须和中间记录进行比较，而中间记录为(1+10)/2=5（注意要取整）即判定数的的根结点为5。<br> 2)考虑判定树的左子树，即将查找区域调整到左半区，此时的查找区间为1,4],那么中间值(1+4)/2=2(注意要取整），所以做孩子根结点为2。<br> (3)考虑判定树的右子树，即将查找区域调整到右半区，此时的查找区间为[6,10],那么中间值为(6+10)2=8(注意要取整），所以做孩子根结点为8<br> (4)重复以上歩骤，依次去确定左右孩子。<br><a target="_blank" rel="noopener" href="https://img-blog.csdn.net/20160706130304182?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">https://img-blog.csdn.net/20160706130304182?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center</a><br>ASL分析</p>
+<ol>
+<li><p>折半查找是一棵二叉排序树，每个根结点的值都大于左子树的所有结点的值，小于右子树所有结点的值</p>
+</li>
+<li><p>折半查找判定树中的结点都是查找成功的情況，将每个结点的空指针指向一个实际上不存在的结点–外结点，所有外界点都是查找不成功的情況，如果有序表的长度为n,则外结点一定有n+1个。</p>
+</li>
+<li><p>折半查找判定树中，某结点所在的层数就是即将要比较的次数，整个判定树代表的有序表的平均査找长度即为查找每个结点的比较次数之和除以内结点个数<br> 例如：长度为10的有序表的平均查找长度为<br> ASL=(1<em>1+2</em>2+3<em>4+4</em>3)/10=29/10; </p>
+</li>
+<li><p>折半查找判定数中，査找不成功的次数即为査找相应外结点与内结点的比较次数。整个判定树代表的有序表的平均查找长度。查找失败时的有序表的平均查找长度即为查找每个外结点的比较次数之和除以外结点的个数<br> 例如：查找失败时，长度为10的有序表的平均查找长度为<br> ASL=(3<em>5+4</em>6)/11=39/11</p>
+</li>
+<li><p>$ASL=log_2(n+1)-1$</p>
+</li>
+</ol>
+<h3 id="静态最优查找树"><a href="#静态最优查找树" class="headerlink" title="静态最优查找树"></a>静态最优查找树</h3><p>带权内路径长度和最小</p>
+<h3 id="索引顺序表"><a href="#索引顺序表" class="headerlink" title="索引顺序表"></a>索引顺序表</h3><p>索引表</p>
+<table>
+<thead>
+<tr>
+<th align="left">块内最大关键字</th>
+<th>块起始地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="动态查找表"><a href="#动态查找表" class="headerlink" title="动态查找表"></a>动态查找表</h2><h3 id="二叉排序树"><a href="#二叉排序树" class="headerlink" title="二叉排序树"></a>二叉排序树</h3><p>左子树&lt;根&lt;右子树<br>查找一个结点的左右子节点</p>
+<ol>
+<li>查找过程中，树中不存在关键字等于给定值，查找失败，插入操作只能作为叶子插入</li>
+<li>查找成功后删除<ol>
+<li>删除叶子结点，父节点指针域为空</li>
+<li>删除只有左子树/右子树的节点，父节点相应指针域改为，指向被删除节点的左/右子树</li>
+<li>删除节点既有左子树又有右子树，以前驱（左子树深度最大的右节点）替代，再删除前驱</li>
+</ol>
+</li>
+</ol>
+<h3 id="二叉平衡树"><a href="#二叉平衡树" class="headerlink" title="二叉平衡树"></a>二叉平衡树</h3><p>每个结点左右子树深度差不大于1，子树的子树引起失衡</p>
+<ul>
+<li>LL左子树的左子树引起失衡：整个树右转</li>
+<li>RR</li>
+<li>LR左子树的右子树引起失衡：左子树向左转，整个树右转</li>
+<li>RL</li>
+</ul>
+<p>插入旋转与删除旋转</p>
+<p>时间复杂度$O(log_2n)$</p>
+<h3 id="B-树"><a href="#B-树" class="headerlink" title="B-树"></a>B-树</h3><p>平衡多路查找树</p>
+<p>m阶:结点最多分枝数</p>
+<p>性质</p>
+<ol>
+<li>每个结点n个关键字，n个指向数据的指针，n+1个指向子树的指针</li>
+<li>每个结点中的多个关键字均自小至大有序排列，即<br> K1≤K2≤,…&lt;Kn;<br> 指针Ai-1所指子树上所有关键字均小于K<br> 指针Ai所指子树上所有关键字均大于Ki</li>
+<li>树中所有叶子结点均在树中的同一层次上<br>  根结点或为空，或至少含有两棵子树</li>
+<li>其余所有结点均至少含有m/2棵子树，至多含有<br>  m棵子树；</li>
+</ol>
+<p>树的建立（5阶为例）</p>
+<p>叶子节点的插入和节点分裂</p>
+<ol>
+<li><p>一棵5阶B-树，所以非根非叶结点至少要有ceil(5/2)=3个分支。根结点可以不满足这个条件，图中的根结点有两个分支。</p>
+</li>
+<li><p>除根结点外，结点中的关键字个数至少为2，因为分支数至少为3</p>
+</li>
+<li><ol>
+<li><p>确定结点中关键字个数范围<br>由于题目要求建立5阶B-树，因此关键字的个数范围为</p>
+<p>2（5-1/2）～4(5-1)</p>
+</li>
+<li><p>根结点最多可以容纳4个关键字，依次插入关键字1、2、6、7后的B-树</p>
+</li>
+</ol>
+<p><img src="file://C:/Users/GK/Documents/Gridea/post-images/1611764409117.webp"></p>
+<ol>
+<li><p>==中点拆分==当插入关键字11的时候，发现此时结点中关键字的个数变为5，超出范围，需要拆分，去关键字数组中的中间位置，也就是k[3]=6，作为一个独立的结点，即新的根结点，将关键字6左、右关键字分别做成两个结点，作为新根结点的两个分支，此时树如下图所示：<br><img src="file://C:/Users/GK/Documents/Gridea/post-images/1611764430380.webp"><br>==中点进入父节点，左右被拆成两个节点==</p>
+</li>
+<li><p>新关键字总是插在叶子结点上，插入关键字4、8、13之后树为：<br><img src="file://C:/Users/GK/Documents/Gridea/post-images/1611764454716.webp"></p>
+</li>
+<li><p>可能发生连锁反应，需要新建父节点</p>
+</li>
+</ol>
+</li>
+<li><p>B-树的删除<br>删除非叶子：向前驱/后继借关键字，然后删除前驱/后继中借走的关健字<br>删除叶子： </p>
+</li>
+<li><p>不过少，直接删除数据和对应指针</p>
+</li>
+<li><p>过少，向左右借，右侧节点上顶出去父节点，父节点向下进入子节点</p>
+</li>
+<li><p>左右不够，剩余关键字与父节点对应关键字都加入兄弟</p>
+</li>
+</ol>
+<p>时间性能分析</p>
+<p>在含N个关键字的B-树上进行一次查找，需访问的结点个数不超过</p>
+<p>$log_{[m/2]}N+1$</p>
+<h2 id="B-树-1"><a href="#B-树-1" class="headerlink" title="B+树"></a>B+树</h2><p>B+树两个头指针，索引块内的每个key对应一个子树，为子树最小的key</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/02/03/search/" data-id="cklm1tbh3000cnouc9qrn6qbk" data-title="查找" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/02/03/queue/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          队列
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/02/03/sort/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">排序</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/02/26/%E7%9B%B8%E6%9C%BA%E6%A8%A1%E5%9E%8B/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/26/c++%E4%B8%8EOOP/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/03/Tree/">树与二叉树</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/03/array/">数组</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
