@@ -71,6 +71,221 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-search" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/02/03/search/" class="article-date">
+  <time class="dt-published" datetime="2021-02-03T01:56:07.000Z" itemprop="datePublished">2021-02-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/02/03/search/">查找</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><h2 id="静态查找表"><a href="#静态查找表" class="headerlink" title="静态查找表"></a>静态查找表</h2><h3 id="时间性能分析-ASL"><a href="#时间性能分析-ASL" class="headerlink" title="时间性能分析 ASL"></a>时间性能分析 ASL</h3><p>$ASL=\sum_{i=1}^{n}P_iC_i$</p>
+<p>$\sum P_i=1$</p>
+<p>$P_i:查找到第i个字符的概率$</p>
+<p>$C_i查找成功时比较过的次数$</p>
+<p>eg：</p>
+<p>顺序查找</p>
+<p>算法的ASL= 查找成功的ASL+查找失败的ASL</p>
+<h3 id="有序表"><a href="#有序表" class="headerlink" title="有序表"></a>有序表</h3><p>折半查找，缩小区间</p>
+<p>折半查找判定树</p>
+<p>长度为10的折半查找判定树的具体生成过程：<br>==左孩子结点&lt;根结点&lt;右孩子结点==<br> (1)在长度为10的有序表中进行折半查找，不论查找哪个记录，都必须和中间记录进行比较，而中间记录为(1+10)/2=5（注意要取整）即判定数的的根结点为5。<br> 2)考虑判定树的左子树，即将查找区域调整到左半区，此时的查找区间为1,4],那么中间值(1+4)/2=2(注意要取整），所以做孩子根结点为2。<br> (3)考虑判定树的右子树，即将查找区域调整到右半区，此时的查找区间为[6,10],那么中间值为(6+10)2=8(注意要取整），所以做孩子根结点为8<br> (4)重复以上歩骤，依次去确定左右孩子。<br><a target="_blank" rel="noopener" href="https://img-blog.csdn.net/20160706130304182?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">https://img-blog.csdn.net/20160706130304182?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center</a><br>ASL分析</p>
+<ol>
+<li><p>折半查找是一棵二叉排序树，每个根结点的值都大于左子树的所有结点的值，小于右子树所有结点的值</p>
+</li>
+<li><p>折半查找判定树中的结点都是查找成功的情況，将每个结点的空指针指向一个实际上不存在的结点–外结点，所有外界点都是查找不成功的情況，如果有序表的长度为n,则外结点一定有n+1个。</p>
+</li>
+<li><p>折半查找判定树中，某结点所在的层数就是即将要比较的次数，整个判定树代表的有序表的平均査找长度即为查找每个结点的比较次数之和除以内结点个数<br> 例如：长度为10的有序表的平均查找长度为<br> ASL=(1<em>1+2</em>2+3<em>4+4</em>3)/10=29/10; </p>
+</li>
+<li><p>折半查找判定数中，査找不成功的次数即为査找相应外结点与内结点的比较次数。整个判定树代表的有序表的平均查找长度。查找失败时的有序表的平均查找长度即为查找每个外结点的比较次数之和除以外结点的个数<br> 例如：查找失败时，长度为10的有序表的平均查找长度为<br> ASL=(3<em>5+4</em>6)/11=39/11</p>
+</li>
+<li><p>$ASL=log_2(n+1)-1$</p>
+</li>
+</ol>
+<h3 id="静态最优查找树"><a href="#静态最优查找树" class="headerlink" title="静态最优查找树"></a>静态最优查找树</h3><p>带权内路径长度和最小</p>
+<h3 id="索引顺序表"><a href="#索引顺序表" class="headerlink" title="索引顺序表"></a>索引顺序表</h3><p>索引表</p>
+<table>
+<thead>
+<tr>
+<th align="left">块内最大关键字</th>
+<th>块起始地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="动态查找表"><a href="#动态查找表" class="headerlink" title="动态查找表"></a>动态查找表</h2><h3 id="二叉排序树"><a href="#二叉排序树" class="headerlink" title="二叉排序树"></a>二叉排序树</h3><p>左子树&lt;根&lt;右子树<br>查找一个结点的左右子节点</p>
+<ol>
+<li>查找过程中，树中不存在关键字等于给定值，查找失败，插入操作只能作为叶子插入</li>
+<li>查找成功后删除<ol>
+<li>删除叶子结点，父节点指针域为空</li>
+<li>删除只有左子树/右子树的节点，父节点相应指针域改为，指向被删除节点的左/右子树</li>
+<li>删除节点既有左子树又有右子树，以前驱（左子树深度最大的右节点）替代，再删除前驱</li>
+</ol>
+</li>
+</ol>
+<h3 id="二叉平衡树"><a href="#二叉平衡树" class="headerlink" title="二叉平衡树"></a>二叉平衡树</h3><p>每个结点左右子树深度差不大于1，子树的子树引起失衡</p>
+<ul>
+<li>LL左子树的左子树引起失衡：整个树右转</li>
+<li>RR</li>
+<li>LR左子树的右子树引起失衡：左子树向左转，整个树右转</li>
+<li>RL</li>
+</ul>
+<p>插入旋转与删除旋转</p>
+<p>时间复杂度$O(log_2n)$</p>
+<h3 id="B-树"><a href="#B-树" class="headerlink" title="B-树"></a>B-树</h3><p>平衡多路查找树</p>
+<p>m阶:结点最多分枝数</p>
+<p>性质</p>
+<ol>
+<li>每个结点n个关键字，n个指向数据的指针，n+1个指向子树的指针</li>
+<li>每个结点中的多个关键字均自小至大有序排列，即<br> K1≤K2≤,…&lt;Kn;<br> 指针Ai-1所指子树上所有关键字均小于K<br> 指针Ai所指子树上所有关键字均大于Ki</li>
+<li>树中所有叶子结点均在树中的同一层次上<br>  根结点或为空，或至少含有两棵子树</li>
+<li>其余所有结点均至少含有m/2棵子树，至多含有<br>  m棵子树；</li>
+</ol>
+<p>树的建立（5阶为例）</p>
+<p>叶子节点的插入和节点分裂</p>
+<ol>
+<li><p>一棵5阶B-树，所以非根非叶结点至少要有ceil(5/2)=3个分支。根结点可以不满足这个条件，图中的根结点有两个分支。</p>
+</li>
+<li><p>除根结点外，结点中的关键字个数至少为2，因为分支数至少为3</p>
+</li>
+<li><ol>
+<li><p>确定结点中关键字个数范围<br>由于题目要求建立5阶B-树，因此关键字的个数范围为</p>
+<p>2（5-1/2）～4(5-1)</p>
+</li>
+<li><p>根结点最多可以容纳4个关键字，依次插入关键字1、2、6、7后的B-树</p>
+</li>
+</ol>
+<p><img src="file://C:/Users/GK/Documents/Gridea/post-images/1611764409117.webp"></p>
+<ol>
+<li><p>==中点拆分==当插入关键字11的时候，发现此时结点中关键字的个数变为5，超出范围，需要拆分，去关键字数组中的中间位置，也就是k[3]=6，作为一个独立的结点，即新的根结点，将关键字6左、右关键字分别做成两个结点，作为新根结点的两个分支，此时树如下图所示：<br><img src="file://C:/Users/GK/Documents/Gridea/post-images/1611764430380.webp"><br>==中点进入父节点，左右被拆成两个节点==</p>
+</li>
+<li><p>新关键字总是插在叶子结点上，插入关键字4、8、13之后树为：<br><img src="file://C:/Users/GK/Documents/Gridea/post-images/1611764454716.webp"></p>
+</li>
+<li><p>可能发生连锁反应，需要新建父节点</p>
+</li>
+</ol>
+</li>
+<li><p>B-树的删除<br>删除非叶子：向前驱/后继借关键字，然后删除前驱/后继中借走的关健字<br>删除叶子： </p>
+</li>
+<li><p>不过少，直接删除数据和对应指针</p>
+</li>
+<li><p>过少，向左右借，右侧节点上顶出去父节点，父节点向下进入子节点</p>
+</li>
+<li><p>左右不够，剩余关键字与父节点对应关键字都加入兄弟</p>
+</li>
+</ol>
+<p>时间性能分析</p>
+<p>在含N个关键字的B-树上进行一次查找，需访问的结点个数不超过</p>
+<p>$log_{[m/2]}N+1$</p>
+<h2 id="B-树-1"><a href="#B-树-1" class="headerlink" title="B+树"></a>B+树</h2><p>B+树两个头指针，索引块内的每个key对应一个子树，为子树最小的key</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/02/03/search/" data-id="cklmi0hu7000ebwuc7tl5gvu7" data-title="查找" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-sort" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/02/03/sort/" class="article-date">
+  <time class="dt-published" datetime="2021-02-03T01:56:07.000Z" itemprop="datePublished">2021-02-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/02/03/sort/">排序</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="排序的特点"><a href="#排序的特点" class="headerlink" title="排序的特点"></a>排序的特点</h2><h3 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h3><p>在待排记录序列中，==任何两个关键字相同==的记录，用某种排序方法排序后==相对位置不变==，则称这种排<br> 序方法是稳定的，否则称为不稳定的</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><h3 id="直接插入"><a href="#直接插入" class="headerlink" title="直接插入"></a>直接插入</h3><p>从j=i-1,从后往前扫描，R[0]为哨兵，R[0]=R[i]</p>
+<p>比较次数+移动次数</p>
+<p>按关键码基本有序，数据量n较小</p>
+<p>==稳定==</p>
+<h3 id="折半插入"><a href="#折半插入" class="headerlink" title="折半插入"></a>折半插入</h3><p>0为哨兵，下标1到i-1为已经有序序列，i为待插入键值</p>
+<p>low=m+1,high=m-1</p>
+<p>最终low=high，再进行一次比较，确定放在前面还是后面</p>
+<p>==后移所有数据==high+1到i-1</p>
+<h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><p>缩小增量</p>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>无序序列中选出key最小数据，插入到有序序列中</p>
+<p>树型选择排序，胜者树</p>
+<p>==不稳定==</p>
+<h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3><p>父节点和子节点有绝对大小关系</p>
+<p>完全二叉树（有序表表示）</p>
+<p>先构建最大堆，取最大值根结点与最后值交换，最大值已选出，不再进入排序堆，调整其他堆结构，继续选择根节点与列表中剩余值的最后一个交换，直至列表结构只剩1号位</p>
+<p>==不稳定==</p>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>将最大值放于末尾</p>
+<p>两两比较，前面比后面大则交换，最终将最大值放在末尾</p>
+<p>从头开始到n-1，再重头到n-2，直到1</p>
+<p>==稳定==</p>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>设置pivot，</p>
+<p>一次快速排序</p>
+<ol>
+<li>将第一个记录设置为 pivot</li>
+<li>从表的两端交替地向中间担描，直到两个指针相遇<br> 先从高端扫描<br> 找到第一个==比 pivotkey小==的记录<br> 将该记录移动到low指针指向的地方；<br> 再从低端扫描</li>
+<li>.将 pivot移动到Iow指针位置，并返回该位置</li>
+</ol>
+<p>完全排序，递归的对排序得到的左右序列[1,pivotloc-1][pivotloc+1,n]进行快速排序</p>
+<p>==不稳定==</p>
+<p>改进，选择枢轴量，3个中选择（2k+1个中选择），先排序low，high，center，将center作为pivot放于[high-1]排序，更可能选出差不多在中间的值，进行快速排序时更可能左右分别&lt;/&gt;privot</p>
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p>分组，递归归并</p>
+<h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><p>高位优先</p>
+<p>低位优先<br><img src="file://C:/Users/GK/Documents/Gridea/post-images/1611794750908.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/02/03/sort/" data-id="cklmi0hu8000hbwuc4h2m8m4f" data-title="排序" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-stack" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/02/03/stack/" class="article-date">
@@ -125,7 +340,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/stack/" data-id="cklmhpm5y000geouc2db3h95f" data-title="栈" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/03/stack/" data-id="cklmi0hu9000jbwuc4muxe48i" data-title="栈" class="article-share-link">Share</a>
       
       
       
@@ -157,7 +372,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cmake/" rel="tag">Cmake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/" rel="tag">OpenCV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
     </div>
   </div>
 
@@ -167,7 +382,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a>
+      <a href="/tags/Cmake/" style="font-size: 10px;">Cmake</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 20px;">数据结构</a>
     </div>
   </div>
 
@@ -189,6 +404,14 @@
       <ul>
         
           <li>
+            <a href="/2021/02/26/PKG_CONFIG/">PKG_CONFIG</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/">安装OpenCvC++库</a>
+          </li>
+        
+          <li>
             <a href="/2021/02/26/%E7%9B%B8%E6%9C%BA%E6%A8%A1%E5%9E%8B/">(no title)</a>
           </li>
         
@@ -198,14 +421,6 @@
         
           <li>
             <a href="/2021/02/26/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/03/Tree/">树与二叉树</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/03/array/">数组</a>
           </li>
         
       </ul>
