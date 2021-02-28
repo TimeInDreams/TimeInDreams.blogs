@@ -97,7 +97,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/27/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" data-id="ckln7ohra000c7suceo8ldoff" data-title="hexo插入图片" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/27/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" data-id="cklpc3s6i000c1gucarjqfxbp" data-title="hexo插入图片" class="article-share-link">Share</a>
       
       
       
@@ -209,7 +209,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/26/PKG_CONFIG/" data-id="ckln7ohqn00007suc12994hwq" data-title="PKG_CONFIG" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/26/PKG_CONFIG/" data-id="cklpc3s6500001gucge6h44fp" data-title="PKG_CONFIG" class="article-share-link">Share</a>
       
       
       
@@ -273,7 +273,8 @@
 <h3 id="配置cmake并编译OpenCV"><a href="#配置cmake并编译OpenCV" class="headerlink" title="配置cmake并编译OpenCV"></a>配置cmake并编译OpenCV</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~&#x2F;opencv</span><br><span class="line">mkdir build</span><br><span class="line">cd build</span><br></pre></td></tr></table></figure>
 
 <p>Cmake编译命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">cmake   -D CMAKE_BUILD_TYPE&#x3D;RELEASE \</span><br><span class="line">        -D CMAKE_INSTALL_PREFIX&#x3D;&#x2F;usr&#x2F;local \</span><br><span class="line">        -D ENABLE_NEON&#x3D;OFF \</span><br><span class="line">        -D ENABLE_FAST_MATH&#x3D;ON \</span><br><span class="line">        -D WITH_GSTREAMER&#x3D;ON \</span><br><span class="line">        -D WITH_LIBV4L&#x3D;ON \</span><br><span class="line">        -D BUILD_opencv_python2&#x3D;OFF \</span><br><span class="line">        -D BUILD_opencv_python3&#x3D;ON \</span><br><span class="line">        -D BUILD_TESTS&#x3D;OFF \</span><br><span class="line">        -D BUILD_PERF_TESTS&#x3D;OFF \</span><br><span class="line">        -D BUILD_EXAMPLES&#x3D;OFF  \</span><br><span class="line">        -D WITH_TBB&#x3D;ON \</span><br><span class="line">        -D BUILD_opencv_world&#x3D;OFF \</span><br><span class="line">        -D WITH_OPENGL&#x3D;ON \</span><br><span class="line">        -D WITH_GTK_2_X&#x3D;ON \</span><br><span class="line">        -D OPENCV_ENABLE_NONFREE&#x3D;ON \</span><br><span class="line">        -D EIGEN_INCLUDE_PATH&#x3D;&quot;&#x2F;usr&#x2F;include&#x2F;eigen3&quot; \</span><br><span class="line">        -D WITH_XINE&#x3D;ON \</span><br><span class="line">        -D WITH_GDAL&#x3D;ON \</span><br><span class="line">        ..</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><code>-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \</code>此处路径必须填写正确，否则编译测试通过后队内代码仍然可能编译报错，缺少xxx文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">cmake   -D CMAKE_BUILD_TYPE&#x3D;RELEASE \</span><br><span class="line">        -D CMAKE_INSTALL_PREFIX&#x3D;&#x2F;usr&#x2F;local \</span><br><span class="line">        -D ENABLE_NEON&#x3D;OFF \</span><br><span class="line">        -D ENABLE_FAST_MATH&#x3D;ON \</span><br><span class="line">        -D WITH_GSTREAMER&#x3D;ON \</span><br><span class="line">        -D WITH_LIBV4L&#x3D;ON \</span><br><span class="line">        -D BUILD_opencv_python2&#x3D;OFF \</span><br><span class="line">        -D BUILD_opencv_python3&#x3D;ON \</span><br><span class="line">        -D BUILD_TESTS&#x3D;OFF \</span><br><span class="line">        -D BUILD_PERF_TESTS&#x3D;OFF \</span><br><span class="line">        -D BUILD_EXAMPLES&#x3D;OFF  \</span><br><span class="line">        -D WITH_TBB&#x3D;ON \</span><br><span class="line">        -D BUILD_opencv_world&#x3D;OFF \</span><br><span class="line">        -D BUILD_opencv_xfeatures2d&#x3D;OFF \</span><br><span class="line">        -D WITH_OPENGL&#x3D;ON \</span><br><span class="line">        -D WITH_GTK_2_X&#x3D;ON \</span><br><span class="line">        -D OPENCV_ENABLE_NONFREE&#x3D;ON \</span><br><span class="line">        -D EIGEN_INCLUDE_PATH&#x3D;&quot;&#x2F;usr&#x2F;include&#x2F;eigen3&quot; \</span><br><span class="line">        -D OPENCV_EXTRA_MODULES_PATH&#x3D;..&#x2F;..&#x2F;opencv_contrib&#x2F;modules \</span><br><span class="line">        -D WITH_XINE&#x3D;ON \</span><br><span class="line">        -D WITH_GDAL&#x3D;ON \</span><br><span class="line">        ..</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make -j8</span><br></pre></td></tr></table></figure>
 
@@ -314,7 +315,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/" data-id="ckln7ohrh000m7sucgndv2tuu" data-title="安装OpenCvC++库" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/" data-id="cklpc3s6n000m1guc2x623ppr" data-title="安装OpenCvC++库" class="article-share-link">Share</a>
       
       
       
@@ -453,7 +454,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/26/%E7%9B%B8%E6%9C%BA%E6%A8%A1%E5%9E%8B/" data-id="ckln7ohri000o7suc73wcfx2i" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/26/%E7%9B%B8%E6%9C%BA%E6%A8%A1%E5%9E%8B/" data-id="cklpc3s6n000o1guc2jvu94f6" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -595,7 +596,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/26/c++%E4%B8%8EOOP/" data-id="ckln7ohr100047suce0a47jy6" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/26/c++%E4%B8%8EOOP/" data-id="cklpc3s6d00051guc2xqd9swe" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -646,10 +647,80 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/26/hello-world/" data-id="ckln7ohr500097suc4p873p1v" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/26/hello-world/" data-id="cklpc3s6g00091gucdbc1duli" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-array" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/02/03/array/" class="article-date">
+  <time class="dt-published" datetime="2021-02-03T01:56:07.000Z" itemprop="datePublished">2021-02-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/02/03/array/">数组</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="数组的顺序映像"><a href="#数组的顺序映像" class="headerlink" title="数组的顺序映像"></a>数组的顺序映像</h2><ol>
+<li><p>以行序为主序(低下标优先)</p>
+<ol>
+<li><h3 id="n维数组储存映像"><a href="#n维数组储存映像" class="headerlink" title="n维数组储存映像"></a>n维数组储存映像</h3><p>$LOC(0,0,0,…,0)+(b_2\times…\times b_n \times j_1+b_3\times …\times b_n\times j_2+…+j_n)$</p>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="2">
+<li>以列序为主序(高下标优先)<h2 id="二维数组的链式地址定位"><a href="#二维数组的链式地址定位" class="headerlink" title="二维数组的链式地址定位"></a>二维数组的链式地址定位</h2>$LOC(j_1,j_2) = LOC(0,0) + (b_2×j_1＋j_2)×L$<br>$A[2,3]即LOC[1,2]$<br>$b_2=3$<h2 id="随机稀疏矩阵的存储"><a href="#随机稀疏矩阵的存储" class="headerlink" title="随机稀疏矩阵的存储"></a>随机稀疏矩阵的存储</h2><h3 id="n维数组储存映像-1"><a href="#n维数组储存映像-1" class="headerlink" title="n维数组储存映像"></a>n维数组储存映像</h3></li>
+</ol>
+<p>$LOC(0,0,0,…,0)+(b_2\times…\times b_n \times j_1+b_3\times …\times b_n\times j_2+…+j_n)$</p>
+<p>## <strong>随机稀疏矩阵的存储</strong></p>
+<ol>
+<li><p>三元组顺序表</p>
+<ul>
+<li><p>i,j,data</p>
+</li>
+<li><p>快速转置算法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cpot[1] &#x3D; 1;</span><br><span class="line"></span><br><span class="line">for (col&#x3D;2; col&lt;&#x3D;M.nu; col ++;)</span><br><span class="line"></span><br><span class="line">   cpot[col] &#x3D; cpot[col-1] + num[col-1];&#x2F;&#x2F;第col列第一个数放的位置</span><br></pre></td></tr></table></figure>
+
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for (p&#x3D;1; p&lt;&#x3D;M.tu; ++p)&#x2F;&#x2F;把非零元素放置到正确位置</span><br><span class="line">    &#123;</span><br><span class="line">        col &#x3D; M.data[p].j; q&#x3D;cpot[col];&#x2F;&#x2F;start a col</span><br><span class="line">        T.data[q].i &#x3D; M.data[p].j;   </span><br><span class="line">        T.data[q].j &#x3D; M.data[p].i;</span><br><span class="line">        T.data[q].e &#x3D; M.data[p].e; </span><br><span class="line">        cpot[col]++;&#x2F;&#x2F;next elem</span><br><span class="line">    &#125;  </span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>行逻辑链接顺序表<br>使用数组 rpos 记录矩阵中每行第一个非 0 元素在一维数组中的存储位置</p>
+</li>
+<li><p>十字链表</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/02/03/array/" data-id="cklpc3s6900011guc0zurbfak" data-title="数组" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+
     </footer>
   </div>
   
@@ -782,77 +853,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/Tree/" data-id="ckln7ohqw00017suc07k85qxy" data-title="树与二叉树" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-array" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/02/03/array/" class="article-date">
-  <time class="dt-published" datetime="2021-02-03T01:56:07.000Z" itemprop="datePublished">2021-02-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/02/03/array/">数组</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="数组的顺序映像"><a href="#数组的顺序映像" class="headerlink" title="数组的顺序映像"></a>数组的顺序映像</h2><ol>
-<li><p>以行序为主序(低下标优先)</p>
-<ol>
-<li><h3 id="n维数组储存映像"><a href="#n维数组储存映像" class="headerlink" title="n维数组储存映像"></a>n维数组储存映像</h3><p>$LOC(0,0,0,…,0)+(b_2\times…\times b_n \times j_1+b_3\times …\times b_n\times j_2+…+j_n)$</p>
-</li>
-</ol>
-</li>
-</ol>
-<ol start="2">
-<li>以列序为主序(高下标优先)<h2 id="二维数组的链式地址定位"><a href="#二维数组的链式地址定位" class="headerlink" title="二维数组的链式地址定位"></a>二维数组的链式地址定位</h2>$LOC(j_1,j_2) = LOC(0,0) + (b_2×j_1＋j_2)×L$<br>$A[2,3]即LOC[1,2]$<br>$b_2=3$<h2 id="随机稀疏矩阵的存储"><a href="#随机稀疏矩阵的存储" class="headerlink" title="随机稀疏矩阵的存储"></a>随机稀疏矩阵的存储</h2><h3 id="n维数组储存映像-1"><a href="#n维数组储存映像-1" class="headerlink" title="n维数组储存映像"></a>n维数组储存映像</h3></li>
-</ol>
-<p>$LOC(0,0,0,…,0)+(b_2\times…\times b_n \times j_1+b_3\times …\times b_n\times j_2+…+j_n)$</p>
-<p>## <strong>随机稀疏矩阵的存储</strong></p>
-<ol>
-<li><p>三元组顺序表</p>
-<ul>
-<li><p>i,j,data</p>
-</li>
-<li><p>快速转置算法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cpot[1] &#x3D; 1;</span><br><span class="line"></span><br><span class="line">for (col&#x3D;2; col&lt;&#x3D;M.nu; col ++;)</span><br><span class="line"></span><br><span class="line">   cpot[col] &#x3D; cpot[col-1] + num[col-1];&#x2F;&#x2F;第col列第一个数放的位置</span><br></pre></td></tr></table></figure>
-
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for (p&#x3D;1; p&lt;&#x3D;M.tu; ++p)&#x2F;&#x2F;把非零元素放置到正确位置</span><br><span class="line">    &#123;</span><br><span class="line">        col &#x3D; M.data[p].j; q&#x3D;cpot[col];&#x2F;&#x2F;start a col</span><br><span class="line">        T.data[q].i &#x3D; M.data[p].j;   </span><br><span class="line">        T.data[q].j &#x3D; M.data[p].i;</span><br><span class="line">        T.data[q].e &#x3D; M.data[p].e; </span><br><span class="line">        cpot[col]++;&#x2F;&#x2F;next elem</span><br><span class="line">    &#125;  </span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>行逻辑链接顺序表<br>使用数组 rpos 记录矩阵中每行第一个非 0 元素在一维数组中的存储位置</p>
-</li>
-<li><p>十字链表</p>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/array/" data-id="ckln7ohr000037sucfnobbgkk" data-title="数组" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/03/Tree/" data-id="cklpc3s6c00031gucb0ke7lw8" data-title="树与二叉树" class="article-share-link">Share</a>
       
       
       
@@ -914,7 +915,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/external_sort/" data-id="ckln7ohr300057sucga6ldyk9" data-title="外部排序" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/03/external_sort/" data-id="cklpc3s6d00041gucgfhfhuhl" data-title="外部排序" class="article-share-link">Share</a>
       
       
       
@@ -975,7 +976,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/graph/" data-id="ckln7ohr400087suc1am8cy9f" data-title="图" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/03/graph/" data-id="cklpc3s6f00081gucesi74daq" data-title="图" class="article-share-link">Share</a>
       
       
       
