@@ -71,6 +71,86 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-k-maps" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/05/k-maps/" class="article-date">
+  <time class="dt-published" datetime="2021-03-05T01:43:07.000Z" itemprop="datePublished">2021-03-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/03/05/k-maps/">k_maps</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="卡诺图"><a href="#卡诺图" class="headerlink" title="卡诺图"></a>卡诺图</h1><h1 id="卡诺图的画法"><a href="#卡诺图的画法" class="headerlink" title="卡诺图的画法"></a>卡诺图的画法</h1><p>先最小项$(m_0-&gt;00=\bar X\bar Y)$+格雷码排列列出卡诺图框架，然后依照每个格子对应的文字编码赋值计算该位置的布尔函数值</p>
+<h1 id="卡诺图化简布尔函数"><a href="#卡诺图化简布尔函数" class="headerlink" title="卡诺图化简布尔函数"></a>卡诺图化简布尔函数</h1><p>标记每个文字的作用域，即赋值为1的两列/两行，</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/05/k-maps/" data-id="cklwy1jpo000ej0uca6oe264i" data-title="k_maps" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-static与this" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/01/static%E4%B8%8Ethis/" class="article-date">
+  <time class="dt-published" datetime="2021-02-28T16:01:15.000Z" itemprop="datePublished">2021-03-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/03/01/static%E4%B8%8Ethis/">static与this</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/01/static%E4%B8%8Ethis/" data-id="cklwy1jpu000qj0uc3zdu8svr" data-title="static与this" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/" rel="tag">c++</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-hexo插入图片" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/02/27/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" class="article-date">
@@ -93,14 +173,29 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <h2 id="第一步：安装插件，在hexo根目录打开Git-Bash-执行"><a href="#第一步：安装插件，在hexo根目录打开Git-Bash-执行" class="headerlink" title="第一步：安装插件，在hexo根目录打开Git Bash,执行"></a>第一步：安装插件，在hexo根目录打开Git Bash,执行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="第二步：打开hexo的配置文件-config-yml"><a href="#第二步：打开hexo的配置文件-config-yml" class="headerlink" title="第二步：打开hexo的配置文件_config.yml"></a>第二步：打开hexo的配置文件_config.yml</h2><h2 id="找到-post-asset-folder，把这个选项从false改成true"><a href="#找到-post-asset-folder，把这个选项从false改成true" class="headerlink" title="找到 post_asset_folder，把这个选项从false改成true"></a>找到 post_asset_folder，把这个选项从false改成true</h2><h2 id="第三步：打开"><a href="#第三步：打开" class="headerlink" title="第三步：打开"></a>第三步：打开</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;node_modules&#x2F;hexo-asset-image&#x2F;index.js</span><br></pre></td></tr></table></figure>
+
+<p>将内容更换为下面的代码<br> （在此感谢Ericam_ 大神：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://blog.csdn.net/xjm850552586">https://blog.csdn.net/xjm850552586</a>）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;use strict&#x27;</span>;</span><br><span class="line">var cheerio = require(<span class="string">&#x27;cheerio&#x27;</span>);</span><br><span class="line"></span><br><span class="line">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line"><span class="keyword">function</span> getPosition(str, m, i) &#123;</span><br><span class="line">  <span class="built_in">return</span> str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var version = String(hexo.version).split(<span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">hexo.extend.filter.register(<span class="string">&#x27;after_post_render&#x27;</span>, <span class="keyword">function</span>(data)&#123;</span><br><span class="line">  var config = hexo.config;</span><br><span class="line">  <span class="keyword">if</span>(config.post_asset_folder)&#123;</span><br><span class="line">        var link = data.permalink;</span><br><span class="line">    <span class="keyword">if</span>(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)</span><br><span class="line">       var beginPos = getPosition(link, <span class="string">&#x27;/&#x27;</span>, 1) + 1;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">       var beginPos = getPosition(link, <span class="string">&#x27;/&#x27;</span>, 3) + 1;</span><br><span class="line">    // In hexo 3.1.1, the permalink of <span class="string">&quot;about&quot;</span> page is like <span class="string">&quot;.../about/index.html&quot;</span>.</span><br><span class="line">    var endPos = link.lastIndexOf(<span class="string">&#x27;/&#x27;</span>) + 1;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess = [<span class="string">&#x27;excerpt&#x27;</span>, <span class="string">&#x27;more&#x27;</span>, <span class="string">&#x27;content&#x27;</span>];</span><br><span class="line">    <span class="keyword">for</span>(var i = 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ = cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: <span class="literal">false</span>,</span><br><span class="line">        xmlMode: <span class="literal">false</span>,</span><br><span class="line">        lowerCaseTags: <span class="literal">false</span>,</span><br><span class="line">        decodeEntities: <span class="literal">false</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(<span class="string">&#x27;img&#x27;</span>).each(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">        <span class="keyword">if</span> ($(this).attr(<span class="string">&#x27;src&#x27;</span>))&#123;</span><br><span class="line">            // For windows style path, we replace <span class="string">&#x27;\&#x27;</span> to <span class="string">&#x27;/&#x27;</span>.</span><br><span class="line">            var src = $(this).attr(<span class="string">&#x27;src&#x27;</span>).replace(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">            <span class="keyword">if</span>(!/http[s]*.*|\/\/.*/.<span class="built_in">test</span>(src) &amp;&amp;</span><br><span class="line">               !/^\s*\//.<span class="built_in">test</span>(src)) &#123;</span><br><span class="line">              // For <span class="string">&quot;about&quot;</span> page, the first part of <span class="string">&quot;src&quot;</span> can<span class="string">&#x27;t be removed.</span></span><br><span class="line"><span class="string">              // In addition, to support multi-level local directory.</span></span><br><span class="line"><span class="string">              var linkArray = link.split(&#x27;</span>/<span class="string">&#x27;).filter(function(elem)&#123;</span></span><br><span class="line"><span class="string">                return elem != &#x27;</span><span class="string">&#x27;;</span></span><br><span class="line"><span class="string">              &#125;);</span></span><br><span class="line"><span class="string">              var srcArray = src.split(&#x27;</span>/<span class="string">&#x27;).filter(function(elem)&#123;</span></span><br><span class="line"><span class="string">                return elem != &#x27;</span><span class="string">&#x27; &amp;&amp; elem != &#x27;</span>.<span class="string">&#x27;;</span></span><br><span class="line"><span class="string">              &#125;);</span></span><br><span class="line"><span class="string">              if(srcArray.length &gt; 1)</span></span><br><span class="line"><span class="string">                srcArray.shift();</span></span><br><span class="line"><span class="string">              src = srcArray.join(&#x27;</span>/<span class="string">&#x27;);</span></span><br><span class="line"><span class="string">              $(this).attr(&#x27;</span>src<span class="string">&#x27;, config.root + link + src);</span></span><br><span class="line"><span class="string">              console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span></span><br><span class="line"><span class="string">            &#125;</span></span><br><span class="line"><span class="string">        &#125;else&#123;</span></span><br><span class="line"><span class="string">            console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);</span></span><br><span class="line"><span class="string">            console.info&amp;&amp;console.info($(this));</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;);</span></span><br><span class="line"><span class="string">      data[key] = $.html();</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;);</span></span><br></pre></td></tr></table></figure>
+
+<p>第四步：现在就可以插入图片了，比如hexo new post photo之后<br> 就在source/_posts生成photo.md文件和photo文件夹，我们把要插入的图片复制到photo文件夹内，<br> 在photo.md文件里面按markdown的标准写,（我的文件名是head.jpeg）比如</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![这是代替图片的文字，随便写](head.jpeg)</span><br></pre></td></tr></table></figure>
+
+<p>注意这里()中不写路径，只写文件名。</p>
+<p>转载：</p>
+<p>作者：DCBXZ<br>链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f72aaad7b852">https://www.jianshu.com/p/f72aaad7b852</a><br>来源：简书</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/27/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" data-id="cklpc75yx000938uc53lmb7wi" data-title="hexo插入图片" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/27/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" data-id="cklwy1jpn000cj0uc1jy0c8dn" data-title="hexo插入图片" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
     </footer>
   </div>
   
@@ -209,7 +304,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/26/PKG_CONFIG/" data-id="cklpc75yj000038uchnw1ata8" data-title="PKG_CONFIG" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/26/PKG_CONFIG/" data-id="cklwy1jp50000j0uc9z4lafqi" data-title="PKG_CONFIG" class="article-share-link">Share</a>
       
       
       
@@ -363,11 +458,120 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/26/c++%E4%B8%8EOOP/" data-id="cklpc75ys000338uc4zhqeoao" data-title="C与C++初步" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/26/c++%E4%B8%8EOOP/" data-id="cklwy1jph0004j0ucf4oi8s5k" data-title="C与C++初步" class="article-share-link">Share</a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-安装OpenCvCpp库" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/" class="article-date">
+  <time class="dt-published" datetime="2021-02-26T08:45:20.000Z" itemprop="datePublished">2021-02-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/">安装OpenCvC++库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="在Ubuntu上安装OpenCV和contrib库"><a href="#在Ubuntu上安装OpenCV和contrib库" class="headerlink" title="在Ubuntu上安装OpenCV和contrib库"></a>在Ubuntu上安装OpenCV和contrib库</h1><p>自从进入3.X时代以后，OpenCV将代码库分成了两部分，分别是稳定的核心功能库opencv库和试验性质的contrib库。</p>
+<h2 id="OpenCV-Contrib库"><a href="#OpenCV-Contrib库" class="headerlink" title="OpenCV Contrib库"></a>OpenCV Contrib库</h2><p>OpenCV Contrib库是非官方的第三方开发扩充库。通过这个库，我们能使用如dnn、相机标注、3D成像、ArUco、物体追踪，背景分割三维重建，SURF、SIFT特征点提取算法等功能。</p>
+<h2 id="0-准备工作"><a href="#0-准备工作" class="headerlink" title="0. 准备工作"></a>0. 准备工作</h2><ul>
+<li>ubuntu18.04</li>
+<li>Cmake&gt;=3.10.2</li>
+<li>unzip</li>
+</ul>
+<h2 id="1-编译"><a href="#1-编译" class="headerlink" title="1.编译"></a>1.编译</h2><h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openssl libssl-dev mingetty zip unzip git curl vim gcc g++ -y</span><br><span class="line">sudo apt install socat zsh  curl git vim make cmake -y</span><br><span class="line">sudo apt install autojump -y</span><br><span class="line">sudo apt-get install -y libtiff5-dev libeigen3-dev</span><br><span class="line">sudo apt install -y git gcc g++ make cmake libgtk2.0-dev libgoogle-glog-dev </span><br><span class="line">sudo apt install -y libtesseract-dev libgtkglext1 libgtkglext1-dev ffmpeg</span><br><span class="line">sudo apt install -y libv4l-0 libv4l-dev</span><br><span class="line">sudo apt install -y liblapacke-dev libopenblas-dev libgtk-3-dev libgstreamer-plugins-base1.0-dev </span><br><span class="line">sudo apt install -y libgstreamer1.0-dev libavresample-dev libgphoto2-dev libdc1394-22-dev</span><br><span class="line">sudo apt-get install -y build-essential make cmake cmake-curses-gui git g++ pkg-config curl</span><br><span class="line">sudo apt-get install -y libavcodec-dev libavformat-dev libavutil-dev libswscale-dev libeigen3-dev libglew-dev libgtk2.0-dev</span><br><span class="line">sudo apt-get install -y libtbb2 libtbb-dev v4l-utils qv4l2 v4l2ucp</span><br><span class="line">sudo apt-get install -y libdc1394-22-dev libxine2-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev</span><br><span class="line">sudo apt-get install -y libjpeg8-dev libjpeg-turbo8-dev libtiff-dev libpng-dev</span><br><span class="line">sudo apt-get install -y libxvidcore-dev libx264-dev libgtk-3-dev</span><br><span class="line">sudo apt-get install -y libatlas-base-dev libopenblas-dev liblapack-dev liblapacke-dev gfortran</span><br><span class="line">sudo apt-get install -y qt5-default</span><br><span class="line">sudo apt-get install -y python3-dev python3-testresources</span><br><span class="line">sudo apt-get install -y libcanberra-gtk-module</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="下载源代码"><a href="#下载源代码" class="headerlink" title="下载源代码"></a>下载源代码</h3><p>选择合适的opencv版本，contrib库版本需与opencv版本相同，以目前使用的3.4.7为例，下载zip压缩包</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv/releases/tag/3.4.7">OpenCV3.4.7</a></p>
+<p><img src="/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/image-20210226180037337.png"></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv_contrib/releases/tag/3.4.7">OpenCV-Contrib</a></p>
+<p><img src="/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/image-20210226180948631.png" alt="image-20210226180948631"></p>
+<p>点击网站，如出现以下报错</p>
+<p><img src="/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/Rc8ce5f5778bb629d3de44f147099b13b.png"></p>
+<p>github被dns污染导致，需要更改本机hosts文件，</p>
+<p>Windows下路径为C:\Windows\System32\drivers\etc\hosts</p>
+<p>Linux下路径为 /etc/hosts</p>
+<p>打开文件加入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># GitHub Start  </span><br><span class="line">140.82.112.3 github.com  </span><br><span class="line">141.192.30.253.118 gist.github.com</span><br><span class="line">142.192.30.253.119 gist.github.com</span><br><span class="line"></span><br><span class="line"># GitHub End</span><br></pre></td></tr></table></figure>
+<p>保存并退出即可。</p>
+<p>使用shell将源代码下载并放入一个文件夹内，需要将version_id改为需要下载的版本号。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">wget -O opencv.zip https://github.com/opencv/opencv/archive/[version_id].zip</span><br><span class="line">wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/[version_id].zip</span><br><span class="line">unzip opencv.zip</span><br><span class="line">unzip opencv_contrib.zip</span><br><span class="line">mv opencv-[version_id] opencv</span><br><span class="line">mv opencv_contrib-[version_id] opencv_contrib</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置cmake并编译OpenCV"><a href="#配置cmake并编译OpenCV" class="headerlink" title="配置cmake并编译OpenCV"></a>配置cmake并编译OpenCV</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~&#x2F;opencv</span><br><span class="line">mkdir build</span><br><span class="line">cd build</span><br></pre></td></tr></table></figure>
+
+<p>Cmake编译命令</p>
+<p><code>-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \</code>此处路径必须填写正确，否则编译测试通过后队内代码仍然可能编译报错，缺少xxx文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">cmake   -D CMAKE_BUILD_TYPE&#x3D;RELEASE \</span><br><span class="line">        -D CMAKE_INSTALL_PREFIX&#x3D;&#x2F;usr&#x2F;local \</span><br><span class="line">        -D ENABLE_NEON&#x3D;OFF \</span><br><span class="line">        -D ENABLE_FAST_MATH&#x3D;ON \</span><br><span class="line">        -D WITH_GSTREAMER&#x3D;ON \</span><br><span class="line">        -D WITH_LIBV4L&#x3D;ON \</span><br><span class="line">        -D BUILD_opencv_python2&#x3D;OFF \</span><br><span class="line">        -D BUILD_opencv_python3&#x3D;ON \</span><br><span class="line">        -D BUILD_TESTS&#x3D;OFF \</span><br><span class="line">        -D BUILD_PERF_TESTS&#x3D;OFF \</span><br><span class="line">        -D BUILD_EXAMPLES&#x3D;OFF  \</span><br><span class="line">        -D WITH_TBB&#x3D;ON \</span><br><span class="line">        -D BUILD_opencv_world&#x3D;OFF \</span><br><span class="line">        -D BUILD_opencv_xfeatures2d&#x3D;OFF \</span><br><span class="line">        -D WITH_OPENGL&#x3D;ON \</span><br><span class="line">        -D WITH_GTK_2_X&#x3D;ON \</span><br><span class="line">        -D OPENCV_ENABLE_NONFREE&#x3D;ON \</span><br><span class="line">        -D EIGEN_INCLUDE_PATH&#x3D;&quot;&#x2F;usr&#x2F;include&#x2F;eigen3&quot; \</span><br><span class="line">        -D OPENCV_EXTRA_MODULES_PATH&#x3D;..&#x2F;..&#x2F;opencv_contrib&#x2F;modules \</span><br><span class="line">        -D WITH_XINE&#x3D;ON \</span><br><span class="line">        -D WITH_GDAL&#x3D;ON \</span><br><span class="line">        ..</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make -j8</span><br></pre></td></tr></table></figure>
+
+<p>此处8为最大支持线程数，一般为cpu数两倍，一般情况下为4核8线程，线程数过多时可能减低编译效率，设置导致编译报错。</p>
+<p>make时如看到</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> make</span></span><br><span class="line">make: * No targets specified and no makefile found.  Stop.</span><br></pre></td></tr></table></figure>
+
+
+
+<p>此时问题为Cmake出现问题，请查看Cmake报错信息</p>
+<h2 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h2><p>编译成功后</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo make install</span><br><span class="line">sudo ldconfig</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/bash.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>在末尾添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PKG_CONFIG_PATH&#x3D;$PKG_CONFIG_PATH:&#x2F;usr&#x2F;local&#x2F;lib&#x2F;pkgconfig  </span><br><span class="line">export PKG_CONFIG_PATH</span><br></pre></td></tr></table></figure>
+
+<p>保存退出</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source /etc/bash.bashrc</span><br><span class="line">sudo updatedb</span><br></pre></td></tr></table></figure>
+
+<p>配置生效</p>
+<p>查看Linux opencv安装库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg-config opencv --libs</span><br></pre></td></tr></table></figure>
+
+<p>查看安装版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg-config opencv --modversion</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-测试"><a href="#3-测试" class="headerlink" title="3.测试"></a>3.测试</h2><p>将如下程序复制至opencv_test.cpp中</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//Example 1. A simple OpenCV program that loads an image from disk and displays it on the screen</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/opencv.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">help</span><span class="params">(<span class="keyword">char</span>** argv )</span> </span>&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;\n&quot;</span></span><br><span class="line">	&lt;&lt; <span class="string">&quot;A simple OpenCV program that loads and displays an image from disk\n&quot;</span></span><br><span class="line">	&lt;&lt; argv[<span class="number">0</span>] &lt;&lt;<span class="string">&quot; &lt;path/filename&gt;\n&quot;</span></span><br><span class="line">	&lt;&lt; <span class="string">&quot;For example:\n&quot;</span></span><br><span class="line">	&lt;&lt; argv[<span class="number">0</span>] &lt;&lt; <span class="string">&quot; ../fruits.jpg\n&quot;</span></span><br><span class="line">	&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">( <span class="keyword">int</span> argc, <span class="keyword">char</span>** argv )</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span> (argc != <span class="number">2</span>) &#123;</span><br><span class="line">		help(argv);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  cv::Mat img = cv::imread( argv[<span class="number">1</span>], <span class="number">-1</span> );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>( img.empty() ) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">  cv::namedWindow( <span class="string">&quot;Example&quot;</span>, cv::WINDOW_AUTOSIZE );</span><br><span class="line">  cv::imshow( <span class="string">&quot;Example&quot;</span>, img );</span><br><span class="line">  cv::waitKey( <span class="number">0</span> );</span><br><span class="line">  cv::destroyWindow( <span class="string">&quot;Example&quot;</span> );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>保存并编译该程序</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -o opencv_test opencv_test.cpp `pkg-config --libs --cflags opencv`</span><br></pre></td></tr></table></figure>
+
+<p>运行程序，从网上下载一张png照片，放到相同文件夹下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;opencv_test</span><br></pre></td></tr></table></figure>
+
+<p>按程序执行即可，不报错即为安装成功</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/" data-id="cklwy1jpv000sj0uc7gio7znf" data-title="安装OpenCvC++库" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenCV/" rel="tag">OpenCV</a></li></ul>
 
     </footer>
   </div>
@@ -508,121 +712,18 @@
 </tr>
 </tbody></table>
 <p>图像传感器感光区域的面积大小。这个尺寸直接决定了整个系统的物理放大率。如：1/3”、1/2”等。绝大多数模拟相机的传感器的长宽比例是4：3(H：V)，数字相机的长宽比例则包括多种：1：1，16：9，3：2 etc。注意相机尺寸的 1”=16mm≠25.4mm</p>
+<h1 id="相机成像的物理模型"><a href="#相机成像的物理模型" class="headerlink" title="相机成像的物理模型"></a>相机成像的物理模型</h1><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/harrypotterjackson/p/11431766.html">摄影基础知识入门</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/harrypotterjackson/p/11431782.html">工业相机基础知识</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/harrypotterjackson/p/12259855.html">工业镜头参数</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/26/%E7%9B%B8%E6%9C%BA%E6%A8%A1%E5%9E%8B/" data-id="cklpc75z6000n38uceotieh0w" data-title="相机模型" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/26/%E7%9B%B8%E6%9C%BA%E6%A8%A1%E5%9E%8B/" data-id="cklwy1jpw000vj0uchdpzbbl8" data-title="相机模型" class="article-share-link">Share</a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/" rel="tag">工业相机</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-安装OpenCvCpp库" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/" class="article-date">
-  <time class="dt-published" datetime="2021-02-26T08:45:20.000Z" itemprop="datePublished">2021-02-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/">安装OpenCvC++库</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="在Ubuntu上安装OpenCV和contrib库"><a href="#在Ubuntu上安装OpenCV和contrib库" class="headerlink" title="在Ubuntu上安装OpenCV和contrib库"></a>在Ubuntu上安装OpenCV和contrib库</h1><p>自从进入3.X时代以后，OpenCV将代码库分成了两部分，分别是稳定的核心功能库opencv库和试验性质的contrib库。</p>
-<h2 id="OpenCV-Contrib库"><a href="#OpenCV-Contrib库" class="headerlink" title="OpenCV Contrib库"></a>OpenCV Contrib库</h2><p>OpenCV Contrib库是非官方的第三方开发扩充库。通过这个库，我们能使用如dnn、相机标注、3D成像、ArUco、物体追踪，背景分割三维重建，SURF、SIFT特征点提取算法等功能。</p>
-<h2 id="0-准备工作"><a href="#0-准备工作" class="headerlink" title="0. 准备工作"></a>0. 准备工作</h2><ul>
-<li>ubuntu18.04</li>
-<li>Cmake&gt;=3.10.2</li>
-<li>unzip</li>
-</ul>
-<h2 id="1-编译"><a href="#1-编译" class="headerlink" title="1.编译"></a>1.编译</h2><h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openssl libssl-dev mingetty zip unzip git curl vim gcc g++ -y</span><br><span class="line">sudo apt install socat zsh  curl git vim make cmake -y</span><br><span class="line">sudo apt install autojump -y</span><br><span class="line">sudo apt-get install -y libtiff5-dev libeigen3-dev</span><br><span class="line">sudo apt install -y git gcc g++ make cmake libgtk2.0-dev libgoogle-glog-dev </span><br><span class="line">sudo apt install -y libtesseract-dev libgtkglext1 libgtkglext1-dev ffmpeg</span><br><span class="line">sudo apt install -y libv4l-0 libv4l-dev</span><br><span class="line">sudo apt install -y liblapacke-dev libopenblas-dev libgtk-3-dev libgstreamer-plugins-base1.0-dev </span><br><span class="line">sudo apt install -y libgstreamer1.0-dev libavresample-dev libgphoto2-dev libdc1394-22-dev</span><br><span class="line">sudo apt-get install -y build-essential make cmake cmake-curses-gui git g++ pkg-config curl</span><br><span class="line">sudo apt-get install -y libavcodec-dev libavformat-dev libavutil-dev libswscale-dev libeigen3-dev libglew-dev libgtk2.0-dev</span><br><span class="line">sudo apt-get install -y libtbb2 libtbb-dev v4l-utils qv4l2 v4l2ucp</span><br><span class="line">sudo apt-get install -y libdc1394-22-dev libxine2-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev</span><br><span class="line">sudo apt-get install -y libjpeg8-dev libjpeg-turbo8-dev libtiff-dev libpng-dev</span><br><span class="line">sudo apt-get install -y libxvidcore-dev libx264-dev libgtk-3-dev</span><br><span class="line">sudo apt-get install -y libatlas-base-dev libopenblas-dev liblapack-dev liblapacke-dev gfortran</span><br><span class="line">sudo apt-get install -y qt5-default</span><br><span class="line">sudo apt-get install -y python3-dev python3-testresources</span><br><span class="line">sudo apt-get install -y libcanberra-gtk-module</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="下载源代码"><a href="#下载源代码" class="headerlink" title="下载源代码"></a>下载源代码</h3><p>选择合适的opencv版本，contrib库版本需与opencv版本相同，以目前使用的3.4.7为例，下载zip压缩包</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv/releases/tag/3.4.7">OpenCV3.4.7</a></p>
-<p><img src="/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/image-20210226180037337.png"></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv_contrib/releases/tag/3.4.7">OpenCV-Contrib</a></p>
-<p><img src="/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/image-20210226180948631.png" alt="image-20210226180948631"></p>
-<p>点击网站，如出现以下报错</p>
-<p><img src="/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/Rc8ce5f5778bb629d3de44f147099b13b.png"></p>
-<p>github被dns污染导致，需要更改本机hosts文件，</p>
-<p>Windows下路径为C:\Windows\System32\drivers\etc\hosts</p>
-<p>Linux下路径为 /etc/hosts</p>
-<p>打开文件加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># GitHub Start  </span><br><span class="line">140.82.112.3 github.com  </span><br><span class="line">141.192.30.253.118 gist.github.com</span><br><span class="line">142.192.30.253.119 gist.github.com</span><br><span class="line"></span><br><span class="line"># GitHub End</span><br></pre></td></tr></table></figure>
-<p>保存并退出即可。</p>
-<p>使用shell将源代码下载并放入一个文件夹内，需要将version_id改为需要下载的版本号。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">wget -O opencv.zip https://github.com/opencv/opencv/archive/[version_id].zip</span><br><span class="line">wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/[version_id].zip</span><br><span class="line">unzip opencv.zip</span><br><span class="line">unzip opencv_contrib.zip</span><br><span class="line">mv opencv-[version_id] opencv</span><br><span class="line">mv opencv_contrib-[version_id] opencv_contrib</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置cmake并编译OpenCV"><a href="#配置cmake并编译OpenCV" class="headerlink" title="配置cmake并编译OpenCV"></a>配置cmake并编译OpenCV</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~&#x2F;opencv</span><br><span class="line">mkdir build</span><br><span class="line">cd build</span><br></pre></td></tr></table></figure>
-
-<p>Cmake编译命令</p>
-<p><code>-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \</code>此处路径必须填写正确，否则编译测试通过后队内代码仍然可能编译报错，缺少xxx文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">cmake   -D CMAKE_BUILD_TYPE&#x3D;RELEASE \</span><br><span class="line">        -D CMAKE_INSTALL_PREFIX&#x3D;&#x2F;usr&#x2F;local \</span><br><span class="line">        -D ENABLE_NEON&#x3D;OFF \</span><br><span class="line">        -D ENABLE_FAST_MATH&#x3D;ON \</span><br><span class="line">        -D WITH_GSTREAMER&#x3D;ON \</span><br><span class="line">        -D WITH_LIBV4L&#x3D;ON \</span><br><span class="line">        -D BUILD_opencv_python2&#x3D;OFF \</span><br><span class="line">        -D BUILD_opencv_python3&#x3D;ON \</span><br><span class="line">        -D BUILD_TESTS&#x3D;OFF \</span><br><span class="line">        -D BUILD_PERF_TESTS&#x3D;OFF \</span><br><span class="line">        -D BUILD_EXAMPLES&#x3D;OFF  \</span><br><span class="line">        -D WITH_TBB&#x3D;ON \</span><br><span class="line">        -D BUILD_opencv_world&#x3D;OFF \</span><br><span class="line">        -D BUILD_opencv_xfeatures2d&#x3D;OFF \</span><br><span class="line">        -D WITH_OPENGL&#x3D;ON \</span><br><span class="line">        -D WITH_GTK_2_X&#x3D;ON \</span><br><span class="line">        -D OPENCV_ENABLE_NONFREE&#x3D;ON \</span><br><span class="line">        -D EIGEN_INCLUDE_PATH&#x3D;&quot;&#x2F;usr&#x2F;include&#x2F;eigen3&quot; \</span><br><span class="line">        -D OPENCV_EXTRA_MODULES_PATH&#x3D;..&#x2F;..&#x2F;opencv_contrib&#x2F;modules \</span><br><span class="line">        -D WITH_XINE&#x3D;ON \</span><br><span class="line">        -D WITH_GDAL&#x3D;ON \</span><br><span class="line">        ..</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make -j8</span><br></pre></td></tr></table></figure>
-
-<p>此处8为最大支持线程数，一般为cpu数两倍，一般情况下为4核8线程，线程数过多时可能减低编译效率，设置导致编译报错。</p>
-<p>make时如看到</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> make</span></span><br><span class="line">make: * No targets specified and no makefile found.  Stop.</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">此时问题为Cmake出现问题，请查看Cmake报错信息</span><br><span class="line"></span><br><span class="line">## 2.安装</span><br><span class="line"></span><br><span class="line">编译成功后</span><br><span class="line"></span><br><span class="line">​&#96;&#96;&#96;shell</span><br><span class="line">sudo make install</span><br><span class="line">sudo ldconfig</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/bash.bashrc</span><br></pre></td></tr></table></figure>
-
-<p>在末尾添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PKG_CONFIG_PATH&#x3D;$PKG_CONFIG_PATH:&#x2F;usr&#x2F;local&#x2F;lib&#x2F;pkgconfig  </span><br><span class="line">export PKG_CONFIG_PATH</span><br></pre></td></tr></table></figure>
-
-<p>保存退出</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source /etc/bash.bashrc</span><br><span class="line">sudo updatedb</span><br></pre></td></tr></table></figure>
-
-<p>配置生效</p>
-<p>查看Linux opencv安装库</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg-config opencv --libs</span><br></pre></td></tr></table></figure>
-
-<p>查看安装版本</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg-config opencv --modversion</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="3-测试"><a href="#3-测试" class="headerlink" title="3.测试"></a>3.测试</h2><p>将如下程序复制至opencv_test.cpp中</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Example 1. A simple OpenCV program that loads an image from disk and displays it on the screen</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/opencv.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">help</span><span class="params">(<span class="keyword">char</span>** argv )</span> </span>&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;\n&quot;</span></span><br><span class="line">	&lt;&lt; <span class="string">&quot;A simple OpenCV program that loads and displays an image from disk\n&quot;</span></span><br><span class="line">	&lt;&lt; argv[<span class="number">0</span>] &lt;&lt;<span class="string">&quot; &lt;path/filename&gt;\n&quot;</span></span><br><span class="line">	&lt;&lt; <span class="string">&quot;For example:\n&quot;</span></span><br><span class="line">	&lt;&lt; argv[<span class="number">0</span>] &lt;&lt; <span class="string">&quot; ../fruits.jpg\n&quot;</span></span><br><span class="line">	&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">( <span class="keyword">int</span> argc, <span class="keyword">char</span>** argv )</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span> (argc != <span class="number">2</span>) &#123;</span><br><span class="line">		help(argv);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">		</span><br><span class="line"></span><br><span class="line">  cv::Mat img = cv::imread( argv[<span class="number">1</span>], <span class="number">-1</span> );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>( img.empty() ) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">  cv::namedWindow( <span class="string">&quot;Example&quot;</span>, cv::WINDOW_AUTOSIZE );</span><br><span class="line">  cv::imshow( <span class="string">&quot;Example&quot;</span>, img );</span><br><span class="line">  cv::waitKey( <span class="number">0</span> );</span><br><span class="line">  cv::destroyWindow( <span class="string">&quot;Example&quot;</span> );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>保存并编译该程序</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -o opencv_test opencv_test.cpp `pkg-config --libs --cflags opencv`</span><br></pre></td></tr></table></figure>
-
-<p>运行程序</p>
-<p>从网上下载一张png照片，放到相同文件夹下。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./opencv_test</span><br></pre></td></tr></table></figure>
-
-<p>按程序执行即可，不报错即为安装成功</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/" data-id="cklpc75z7000p38uce9qbgzaw" data-title="安装OpenCvC++库" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenCV/" rel="tag">OpenCV</a></li></ul>
 
     </footer>
   </div>
@@ -671,10 +772,80 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/26/hello-world/" data-id="cklpc75yw000838uc0lfmhzgy" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/26/hello-world/" data-id="cklwy1jpj0009j0ucahx77nzy" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-array" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/02/03/array/" class="article-date">
+  <time class="dt-published" datetime="2021-02-03T01:56:07.000Z" itemprop="datePublished">2021-02-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/02/03/array/">数组</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="数组的顺序映像"><a href="#数组的顺序映像" class="headerlink" title="数组的顺序映像"></a>数组的顺序映像</h2><ol>
+<li><p>以行序为主序(低下标优先)</p>
+<ol>
+<li><h3 id="n维数组储存映像"><a href="#n维数组储存映像" class="headerlink" title="n维数组储存映像"></a>n维数组储存映像</h3><p>$LOC(0,0,0,…,0)+(b_2\times…\times b_n \times j_1+b_3\times …\times b_n\times j_2+…+j_n)$</p>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="2">
+<li>以列序为主序(高下标优先)<h2 id="二维数组的链式地址定位"><a href="#二维数组的链式地址定位" class="headerlink" title="二维数组的链式地址定位"></a>二维数组的链式地址定位</h2>$LOC(j_1,j_2) = LOC(0,0) + (b_2×j_1＋j_2)×L$<br>$A[2,3]即LOC[1,2]$<br>$b_2=3$<h2 id="随机稀疏矩阵的存储"><a href="#随机稀疏矩阵的存储" class="headerlink" title="随机稀疏矩阵的存储"></a>随机稀疏矩阵的存储</h2><h3 id="n维数组储存映像-1"><a href="#n维数组储存映像-1" class="headerlink" title="n维数组储存映像"></a>n维数组储存映像</h3></li>
+</ol>
+<p>$LOC(0,0,0,…,0)+(b_2\times…\times b_n \times j_1+b_3\times …\times b_n\times j_2+…+j_n)$</p>
+<p>## <strong>随机稀疏矩阵的存储</strong></p>
+<ol>
+<li><p>三元组顺序表</p>
+<ul>
+<li><p>i,j,data</p>
+</li>
+<li><p>快速转置算法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cpot[1] &#x3D; 1;</span><br><span class="line"></span><br><span class="line">for (col&#x3D;2; col&lt;&#x3D;M.nu; col ++;)</span><br><span class="line"></span><br><span class="line">   cpot[col] &#x3D; cpot[col-1] + num[col-1];&#x2F;&#x2F;第col列第一个数放的位置</span><br></pre></td></tr></table></figure>
+
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for (p&#x3D;1; p&lt;&#x3D;M.tu; ++p)&#x2F;&#x2F;把非零元素放置到正确位置</span><br><span class="line">    &#123;</span><br><span class="line">        col &#x3D; M.data[p].j; q&#x3D;cpot[col];&#x2F;&#x2F;start a col</span><br><span class="line">        T.data[q].i &#x3D; M.data[p].j;   </span><br><span class="line">        T.data[q].j &#x3D; M.data[p].i;</span><br><span class="line">        T.data[q].e &#x3D; M.data[p].e; </span><br><span class="line">        cpot[col]++;&#x2F;&#x2F;next elem</span><br><span class="line">    &#125;  </span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>行逻辑链接顺序表<br>使用数组 rpos 记录矩阵中每行第一个非 0 元素在一维数组中的存储位置</p>
+</li>
+<li><p>十字链表</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/02/03/array/" data-id="cklwy1jpd0001j0uc3ymg59kc" data-title="数组" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+
     </footer>
   </div>
   
@@ -807,200 +978,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/Tree/" data-id="cklpc75yp000138uceqk3ayii" data-title="树与二叉树" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-array" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/02/03/array/" class="article-date">
-  <time class="dt-published" datetime="2021-02-03T01:56:07.000Z" itemprop="datePublished">2021-02-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/02/03/array/">数组</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="数组的顺序映像"><a href="#数组的顺序映像" class="headerlink" title="数组的顺序映像"></a>数组的顺序映像</h2><ol>
-<li><p>以行序为主序(低下标优先)</p>
-<ol>
-<li><h3 id="n维数组储存映像"><a href="#n维数组储存映像" class="headerlink" title="n维数组储存映像"></a>n维数组储存映像</h3><p>$LOC(0,0,0,…,0)+(b_2\times…\times b_n \times j_1+b_3\times …\times b_n\times j_2+…+j_n)$</p>
-</li>
-</ol>
-</li>
-</ol>
-<ol start="2">
-<li>以列序为主序(高下标优先)<h2 id="二维数组的链式地址定位"><a href="#二维数组的链式地址定位" class="headerlink" title="二维数组的链式地址定位"></a>二维数组的链式地址定位</h2>$LOC(j_1,j_2) = LOC(0,0) + (b_2×j_1＋j_2)×L$<br>$A[2,3]即LOC[1,2]$<br>$b_2=3$<h2 id="随机稀疏矩阵的存储"><a href="#随机稀疏矩阵的存储" class="headerlink" title="随机稀疏矩阵的存储"></a>随机稀疏矩阵的存储</h2><h3 id="n维数组储存映像-1"><a href="#n维数组储存映像-1" class="headerlink" title="n维数组储存映像"></a>n维数组储存映像</h3></li>
-</ol>
-<p>$LOC(0,0,0,…,0)+(b_2\times…\times b_n \times j_1+b_3\times …\times b_n\times j_2+…+j_n)$</p>
-<p>## <strong>随机稀疏矩阵的存储</strong></p>
-<ol>
-<li><p>三元组顺序表</p>
-<ul>
-<li><p>i,j,data</p>
-</li>
-<li><p>快速转置算法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cpot[1] &#x3D; 1;</span><br><span class="line"></span><br><span class="line">for (col&#x3D;2; col&lt;&#x3D;M.nu; col ++;)</span><br><span class="line"></span><br><span class="line">   cpot[col] &#x3D; cpot[col-1] + num[col-1];&#x2F;&#x2F;第col列第一个数放的位置</span><br></pre></td></tr></table></figure>
-
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for (p&#x3D;1; p&lt;&#x3D;M.tu; ++p)&#x2F;&#x2F;把非零元素放置到正确位置</span><br><span class="line">    &#123;</span><br><span class="line">        col &#x3D; M.data[p].j; q&#x3D;cpot[col];&#x2F;&#x2F;start a col</span><br><span class="line">        T.data[q].i &#x3D; M.data[p].j;   </span><br><span class="line">        T.data[q].j &#x3D; M.data[p].i;</span><br><span class="line">        T.data[q].e &#x3D; M.data[p].e; </span><br><span class="line">        cpot[col]++;&#x2F;&#x2F;next elem</span><br><span class="line">    &#125;  </span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>行逻辑链接顺序表<br>使用数组 rpos 记录矩阵中每行第一个非 0 元素在一维数组中的存储位置</p>
-</li>
-<li><p>十字链表</p>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/array/" data-id="cklpc75yt000438uc19cl3nai" data-title="数组" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-external_sort" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/02/03/external_sort/" class="article-date">
-  <time class="dt-published" datetime="2021-02-03T01:56:07.000Z" itemprop="datePublished">2021-02-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/02/03/external_sort/">外部排序</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="外部排序定义"><a href="#外部排序定义" class="headerlink" title="外部排序定义"></a>外部排序定义</h2><p>归并次数<br>s等于归并树的高度,m为归并段数$s=log_2m$</p>
-<p>t=内部排序所需时间+外存读写所需时间+内部归并所需时间</p>
-<p>读写外存次数s+1</p>
-<p>10个归并段，2路归并，再假设磁盘每个物理块可容纳200个记录，则每10000个记<br> 录需要50次读50次写，共100次操作。<br> 全部排序共需要读写次数为：d=100*(4+1)=500。</p>
-<h2 id="多路平衡归并"><a href="#多路平衡归并" class="headerlink" title="多路平衡归并"></a>多路平衡归并</h2><p>k路归并，k个数中选最小</p>
-<h3 id="败者树"><a href="#败者树" class="headerlink" title="败者树"></a>败者树</h3><p>储存败者</p>
-<p>ls[0]胜者</p>
-<p>设ls[t]是b[s]的父节点<br> t=(s+k)/2</p>
-<p>$s\in[0,m-1]归并段序号 $</p>
-<p>$h=log_2k$</p>
-<ol>
-<li>调整（比赛过程）</li>
-<li>创建，将ls[]节点初始化为KEY_MIN</li>
-<li>从b[k-1]到b[0],插入，然后调整</li>
-</ol>
-<h2 id="置换选择排序构造初始归并段"><a href="#置换选择排序构造初始归并段" class="headerlink" title="置换选择排序构造初始归并段"></a>置换选择排序构造初始归并段</h2><p>原始文件&gt;&gt;内存（败者树）&gt;&gt;归并段（数据有序）</p>
-<h3 id="败者树规则"><a href="#败者树规则" class="headerlink" title="败者树规则"></a>败者树规则</h3><p>从WA中所有比关键字 MIINMAX大的记录中，选择最小的记录，作为新的 MIINMAX,放入归并段，直至内存空或没有比MINMAX_NOW更大的数据，在归并段中加入标记，这样就完成了一个归并段。</p>
-<p>先比段号，段号小的胜利</p>
-<h2 id="最佳归并树"><a href="#最佳归并树" class="headerlink" title="最佳归并树"></a>最佳归并树</h2><p>带权路径和WPL最小，将较大节点放在靠近根节点处，k路归并</p>
-<p>添加空归并段</p>
-<p>虚段数u=k-1-(m-1)%(k-1) if (m-1)%(k-1)！=0</p>
-<p>将k个最小值构成一个树，根为和</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/external_sort/" data-id="cklpc75yu000538uca9uo5xih" data-title="外部排序" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-graph" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/02/03/graph/" class="article-date">
-  <time class="dt-published" datetime="2021-02-03T01:56:07.000Z" itemprop="datePublished">2021-02-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/02/03/graph/">图</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="联通网的最小生成树"><a href="#联通网的最小生成树" class="headerlink" title="联通网的最小生成树"></a>联通网的最小生成树</h2><p>prim算法</p>
-<p>与最小生成子树T与与其补集构成的割，选择最短跨边，连接的顶点加入T</p>
-<h2 id="一个点到其他点最短路径"><a href="#一个点到其他点最短路径" class="headerlink" title="一个点到其他点最短路径"></a>一个点到其他点最短路径</h2><p>迪杰斯特拉算法</p>
-<p>原点V0，选择与V0距离最短的点加入最短距离生成树</p>
-<h2 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h2><p>判断有向图是否存在回路</p>
-<ol>
-<li>从有向图中选取一个没有前驱的顶点，并输出之</li>
-<li>从有向图中删去此顶点以及所有以它为尾的孤</li>
-<li>重复上述两步，直至图空，或者图不空但找不到无<br> 前驱的顶点为止</li>
-</ol>
-<p>AOV</p>
-<h2 id="关键路径"><a href="#关键路径" class="headerlink" title="关键路径"></a>关键路径</h2><p>节点VE，VL</p>
-<p>边AE，AL</p>
-<ol>
-<li>求拓扑排序</li>
-<li>按照拓扑排序求VE</li>
-<li>拓扑排序逆序求VL</li>
-<li>AE=弧头VE</li>
-<li>AL=弧尾VL-弧Weight</li>
-<li>AE=AL的弧即为关键路径</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/graph/" data-id="cklpc75yy000b38ucfb274ocr" data-title="图" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/03/Tree/" data-id="cklwy1jpg0003j0uc0xts7pxz" data-title="树与二叉树" class="article-share-link">Share</a>
       
       
       
@@ -1032,7 +1010,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cmake/" rel="tag">Cmake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/" rel="tag">OpenCV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/" rel="tag">工业相机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cmake/" rel="tag">Cmake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/" rel="tag">OpenCV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/" rel="tag">工业相机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
     </div>
   </div>
 
@@ -1042,7 +1020,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/Cmake/" style="font-size: 10px;">Cmake</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/" style="font-size: 10px;">工业相机</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 20px;">数据结构</a>
+      <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/Cmake/" style="font-size: 10px;">Cmake</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/c/" style="font-size: 10px;">c++</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/" style="font-size: 10px;">工业相机</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 20px;">数据结构</a>
     </div>
   </div>
 
@@ -1051,7 +1029,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
     </div>
   </div>
 
@@ -1064,6 +1042,14 @@
       <ul>
         
           <li>
+            <a href="/2021/03/05/k-maps/">k_maps</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/01/static%E4%B8%8Ethis/">static与this</a>
+          </li>
+        
+          <li>
             <a href="/2021/02/27/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">hexo插入图片</a>
           </li>
         
@@ -1073,14 +1059,6 @@
         
           <li>
             <a href="/2021/02/26/c++%E4%B8%8EOOP/">C与C++初步</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/26/%E7%9B%B8%E6%9C%BA%E6%A8%A1%E5%9E%8B/">相机模型</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/">安装OpenCvC++库</a>
           </li>
         
       </ul>

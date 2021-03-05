@@ -17,7 +17,7 @@
 <meta property="og:image" content="http://example.com/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/image-20210226180948631.png">
 <meta property="og:image" content="http://example.com/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/Rc8ce5f5778bb629d3de44f147099b13b.png">
 <meta property="article:published_time" content="2021-02-26T08:45:20.000Z">
-<meta property="article:modified_time" content="2021-02-28T15:54:10.410Z">
+<meta property="article:modified_time" content="2021-03-05T23:42:39.781Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="OpenCV">
 <meta name="twitter:card" content="summary">
@@ -137,7 +137,11 @@
 <p>make时如看到</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> make</span></span><br><span class="line">make: * No targets specified and no makefile found.  Stop.</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">此时问题为Cmake出现问题，请查看Cmake报错信息</span><br><span class="line"></span><br><span class="line">## 2.安装</span><br><span class="line"></span><br><span class="line">编译成功后</span><br><span class="line"></span><br><span class="line">​&#96;&#96;&#96;shell</span><br><span class="line">sudo make install</span><br><span class="line">sudo ldconfig</span><br></pre></td></tr></table></figure>
+
+
+<p>此时问题为Cmake出现问题，请查看Cmake报错信息</p>
+<h2 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h2><p>编译成功后</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo make install</span><br><span class="line">sudo ldconfig</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/bash.bashrc</span><br></pre></td></tr></table></figure>
 
@@ -157,20 +161,19 @@
 
 
 <h2 id="3-测试"><a href="#3-测试" class="headerlink" title="3.测试"></a>3.测试</h2><p>将如下程序复制至opencv_test.cpp中</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Example 1. A simple OpenCV program that loads an image from disk and displays it on the screen</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/opencv.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">help</span><span class="params">(<span class="keyword">char</span>** argv )</span> </span>&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;\n&quot;</span></span><br><span class="line">	&lt;&lt; <span class="string">&quot;A simple OpenCV program that loads and displays an image from disk\n&quot;</span></span><br><span class="line">	&lt;&lt; argv[<span class="number">0</span>] &lt;&lt;<span class="string">&quot; &lt;path/filename&gt;\n&quot;</span></span><br><span class="line">	&lt;&lt; <span class="string">&quot;For example:\n&quot;</span></span><br><span class="line">	&lt;&lt; argv[<span class="number">0</span>] &lt;&lt; <span class="string">&quot; ../fruits.jpg\n&quot;</span></span><br><span class="line">	&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">( <span class="keyword">int</span> argc, <span class="keyword">char</span>** argv )</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span> (argc != <span class="number">2</span>) &#123;</span><br><span class="line">		help(argv);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">		</span><br><span class="line"></span><br><span class="line">  cv::Mat img = cv::imread( argv[<span class="number">1</span>], <span class="number">-1</span> );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>( img.empty() ) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">  cv::namedWindow( <span class="string">&quot;Example&quot;</span>, cv::WINDOW_AUTOSIZE );</span><br><span class="line">  cv::imshow( <span class="string">&quot;Example&quot;</span>, img );</span><br><span class="line">  cv::waitKey( <span class="number">0</span> );</span><br><span class="line">  cv::destroyWindow( <span class="string">&quot;Example&quot;</span> );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//Example 1. A simple OpenCV program that loads an image from disk and displays it on the screen</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/opencv.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">help</span><span class="params">(<span class="keyword">char</span>** argv )</span> </span>&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;\n&quot;</span></span><br><span class="line">	&lt;&lt; <span class="string">&quot;A simple OpenCV program that loads and displays an image from disk\n&quot;</span></span><br><span class="line">	&lt;&lt; argv[<span class="number">0</span>] &lt;&lt;<span class="string">&quot; &lt;path/filename&gt;\n&quot;</span></span><br><span class="line">	&lt;&lt; <span class="string">&quot;For example:\n&quot;</span></span><br><span class="line">	&lt;&lt; argv[<span class="number">0</span>] &lt;&lt; <span class="string">&quot; ../fruits.jpg\n&quot;</span></span><br><span class="line">	&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">( <span class="keyword">int</span> argc, <span class="keyword">char</span>** argv )</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span> (argc != <span class="number">2</span>) &#123;</span><br><span class="line">		help(argv);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  cv::Mat img = cv::imread( argv[<span class="number">1</span>], <span class="number">-1</span> );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>( img.empty() ) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">  cv::namedWindow( <span class="string">&quot;Example&quot;</span>, cv::WINDOW_AUTOSIZE );</span><br><span class="line">  cv::imshow( <span class="string">&quot;Example&quot;</span>, img );</span><br><span class="line">  cv::waitKey( <span class="number">0</span> );</span><br><span class="line">  cv::destroyWindow( <span class="string">&quot;Example&quot;</span> );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>保存并编译该程序</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -o opencv_test opencv_test.cpp `pkg-config --libs --cflags opencv`</span><br></pre></td></tr></table></figure>
 
-<p>运行程序</p>
-<p>从网上下载一张png照片，放到相同文件夹下。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./opencv_test</span><br></pre></td></tr></table></figure>
+<p>运行程序，从网上下载一张png照片，放到相同文件夹下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;opencv_test</span><br></pre></td></tr></table></figure>
 
 <p>按程序执行即可，不报错即为安装成功</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/" data-id="cklpc75z7000p38uce9qbgzaw" data-title="安装OpenCvC++库" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/" data-id="cklwy1jpv000sj0uc7gio7znf" data-title="安装OpenCvC++库" class="article-share-link">Share</a>
       
       
       
@@ -182,19 +185,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/02/26/%E7%9B%B8%E6%9C%BA%E6%A8%A1%E5%9E%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/02/26/c++%E4%B8%8EOOP/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          相机模型
+          C与C++初步
         
       </div>
     </a>
   
   
-    <a href="/2021/02/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/02/26/%E7%9B%B8%E6%9C%BA%E6%A8%A1%E5%9E%8B/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">相机模型</div>
     </a>
   
 </nav>
@@ -214,7 +217,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cmake/" rel="tag">Cmake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/" rel="tag">OpenCV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/" rel="tag">工业相机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cmake/" rel="tag">Cmake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/" rel="tag">OpenCV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/" rel="tag">工业相机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
     </div>
   </div>
 
@@ -224,7 +227,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/Cmake/" style="font-size: 10px;">Cmake</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/" style="font-size: 10px;">工业相机</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 20px;">数据结构</a>
+      <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/Cmake/" style="font-size: 10px;">Cmake</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/c/" style="font-size: 10px;">c++</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/" style="font-size: 10px;">工业相机</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 20px;">数据结构</a>
     </div>
   </div>
 
@@ -233,7 +236,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
     </div>
   </div>
 
@@ -246,6 +249,14 @@
       <ul>
         
           <li>
+            <a href="/2021/03/05/k-maps/">k_maps</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/01/static%E4%B8%8Ethis/">static与this</a>
+          </li>
+        
+          <li>
             <a href="/2021/02/27/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">hexo插入图片</a>
           </li>
         
@@ -255,14 +266,6 @@
         
           <li>
             <a href="/2021/02/26/c++%E4%B8%8EOOP/">C与C++初步</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/26/%E7%9B%B8%E6%9C%BA%E6%A8%A1%E5%9E%8B/">相机模型</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/26/%E5%AE%89%E8%A3%85OpenCvCpp%E5%BA%93/">安装OpenCvC++库</a>
           </li>
         
       </ul>
