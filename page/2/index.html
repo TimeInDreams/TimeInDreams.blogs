@@ -119,7 +119,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/external_sort/" data-id="cklwy1jpi0005j0ucbsgq6mjd" data-title="外部排序" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/03/external_sort/" data-id="cklx0lrxt000548ucgdms78gt" data-title="外部排序" class="article-share-link">Share</a>
       
       
       
@@ -180,7 +180,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/graph/" data-id="cklwy1jpj0008j0ucfh091p2i" data-title="图" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/03/graph/" data-id="cklx0lrxu000848ucb74r3yg1" data-title="图" class="article-share-link">Share</a>
       
       
       
@@ -248,7 +248,149 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/queue/" data-id="cklwy1jpr000gj0ucef5u4yfy" data-title="队列" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/03/queue/" data-id="cklx0lrxz000g48ucgf3wd2qb" data-title="队列" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-sort" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/02/03/sort/" class="article-date">
+  <time class="dt-published" datetime="2021-02-03T01:56:07.000Z" itemprop="datePublished">2021-02-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/02/03/sort/">排序</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="排序的特点"><a href="#排序的特点" class="headerlink" title="排序的特点"></a>排序的特点</h2><h3 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h3><p>在待排记录序列中，==任何两个关键字相同==的记录，用某种排序方法排序后==相对位置不变==，则称这种排<br> 序方法是稳定的，否则称为不稳定的</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><h3 id="直接插入"><a href="#直接插入" class="headerlink" title="直接插入"></a>直接插入</h3><p>从j=i-1,从后往前扫描，R[0]为哨兵，R[0]=R[i]</p>
+<p>比较次数+移动次数</p>
+<p>按关键码基本有序，数据量n较小</p>
+<p>==稳定==</p>
+<h3 id="折半插入"><a href="#折半插入" class="headerlink" title="折半插入"></a>折半插入</h3><p>0为哨兵，下标1到i-1为已经有序序列，i为待插入键值</p>
+<p>low=m+1,high=m-1</p>
+<p>最终low=high，再进行一次比较，确定放在前面还是后面</p>
+<p>==后移所有数据==high+1到i-1</p>
+<h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><p>缩小增量</p>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>无序序列中选出key最小数据，插入到有序序列中</p>
+<p>树型选择排序，胜者树</p>
+<p>==不稳定==</p>
+<h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3><p>父节点和子节点有绝对大小关系</p>
+<p>完全二叉树（有序表表示）</p>
+<p>先构建最大堆，取最大值根结点与最后值交换，最大值已选出，不再进入排序堆，调整其他堆结构，继续选择根节点与列表中剩余值的最后一个交换，直至列表结构只剩1号位</p>
+<p>==不稳定==</p>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>将最大值放于末尾</p>
+<p>两两比较，前面比后面大则交换，最终将最大值放在末尾</p>
+<p>从头开始到n-1，再重头到n-2，直到1</p>
+<p>==稳定==</p>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>设置pivot，</p>
+<p>一次快速排序</p>
+<ol>
+<li>将第一个记录设置为 pivot</li>
+<li>从表的两端交替地向中间担描，直到两个指针相遇<br> 先从高端扫描<br> 找到第一个==比 pivotkey小==的记录<br> 将该记录移动到low指针指向的地方；<br> 再从低端扫描</li>
+<li>.将 pivot移动到Iow指针位置，并返回该位置</li>
+</ol>
+<p>完全排序，递归的对排序得到的左右序列[1,pivotloc-1][pivotloc+1,n]进行快速排序</p>
+<p>==不稳定==</p>
+<p>改进，选择枢轴量，3个中选择（2k+1个中选择），先排序low，high，center，将center作为pivot放于[high-1]排序，更可能选出差不多在中间的值，进行快速排序时更可能左右分别&lt;/&gt;privot</p>
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p>分组，递归归并</p>
+<h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><p>高位优先</p>
+<p>低位优先<br><img src="file://C:/Users/GK/Documents/Gridea/post-images/1611794750908.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/02/03/sort/" data-id="cklx0lry0000i48uccwcracsz" data-title="排序" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-stack" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/02/03/stack/" class="article-date">
+  <time class="dt-published" datetime="2021-02-03T01:56:07.000Z" itemprop="datePublished">2021-02-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/02/03/stack/">栈</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="栈的实现"><a href="#栈的实现" class="headerlink" title="栈的实现"></a>栈的实现</h2><h3 id="顺序栈"><a href="#顺序栈" class="headerlink" title="顺序栈"></a>顺序栈</h3><p>类似于线性表的顺序映象实现，指向表尾的指针可以作为栈顶指针。</p>
+<ol>
+<li>追加储存空间<br> <code>S.top = S.base + S.stacksize; //更新top指针</code><h3 id="链栈"><a href="#链栈" class="headerlink" title="链栈"></a>链栈</h3><h2 id="进栈与上溢，出栈与下溢"><a href="#进栈与上溢，出栈与下溢" class="headerlink" title="进栈与上溢，出栈与下溢"></a>进栈与上溢，出栈与下溢</h2><h2 id="栈混洗"><a href="#栈混洗" class="headerlink" title="栈混洗"></a>栈混洗</h2></li>
+</ol>
+<h3 id="求解可能的序列数"><a href="#求解可能的序列数" class="headerlink" title="求解可能的序列数"></a>求解可能的序列数</h3><p>一般情形下，我们假设进栈序列为１，２，３，……，ｎ，可能的退栈序列有$f（ｎ）$种，对此，我们可以做如下推导：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">当ｎ＝０时，ｍ（０）＝１：退栈序列为｛｝；</span><br><span class="line">当ｎ＝１时，ｍ（１）＝１：退栈序列为｛１｝；</span><br><span class="line">当ｎ＝２时，ｍ（２）＝２：</span><br><span class="line">退栈序列中１在首位，１左侧有０个数，１右侧有一个数，有ｍ（０）＊ｍ（１）种可能，１在末位，１左侧有一个数，右侧有０个数，有ｍ（１）＊ｍ（０）种，一共有ｍ（０）＊ｍ（１）＋ｍ（１）＊ｍ（０）种可能的序列。</span><br></pre></td></tr></table></figure>
+
+<p>简单的推导中不难发现，将１置于ｉ＝１……ｎ的位置，则可能的序列数为$f（ｉ－１）\times f （ｎ－ｉ）$种。<br> 总结一下：<br> 一般的，设有n个元素序号按序号１,２，……，ｎ进栈，轮流让１在退栈序列的第１，第２，……，第ｎ位，则可能的的退栈序列种数为：<br> $f（０）\times f（ｎ－１）＋f（１）\times f（ｎ－２）＋……＋f（ｎ－１）\times f（０）<br> \＝\frac{1}{n+1}\timesＣ<em>{2n}^n<br> \＝\frac{（２ｎ）（２ｎ－１）……（ｎ＋２）}{ｎ！}$<br> 不符合要求的数的特征是由左而右扫描时，必然在某一奇数位2m+1位上首先出现m+1个0的累计数和m个1的累计数，此后的2(n-m)-1位上有n-m个 1和n-m-1个0。如若把后面这2(n-m)-1位上的0和1互换，使之成为n-m个0和n-m-1个1，结果得1个由n+1个0和n-1个1组成的2n位数，即一个不合要求的数对应于一个由n+1个0和n-1个1组成的排列。<br> 反过来，任何一个由n+1个0和n-1个1组成的2n位二进制数，由于0的个数多2个，2n为偶数，故必在某一个奇数位上出现0的累计数超过1的累计数。同样在后面部分0和1互换，使之成为由n个0和n个1组成的2n位数，即n+1个0和n-1个1组成的2n位数必对应一个不符合要求的数。<br> 不合要求的2n位数与n＋1个0，n－1个1组成的排列一一对应。不符合要求方案数为$c</em>{2n}^{n+1}$</p>
+<h3 id="不可能的退栈序列"><a href="#不可能的退栈序列" class="headerlink" title="不可能的退栈序列"></a>不可能的退栈序列</h3><p>设对于初始进栈序列1，2，3，……，ｎ，利用栈得到可能的退栈序列为ｐ１，ｐ２，……，ｐｉ，……，ｐｎ，</p>
+<p>如果序号ｉ＜ｊ＜ｋ，且在进栈序列中ｐｉ＜ｐｊ＜ｐｋ，即：<br> ……，ｐｉ，……，ｐｊ，……，ｐｋ，……（ｐｉ＜ｐｊ＜ｐｋ）<br> 则……，ｐｋ，……，ｐｉ，……，ｐｊ，……就是不可能的退栈序列。</p>
+<p>因为ｐｋ在ｐｉ和ｐｊ之后进栈，又先于ｐｉ和ｐｊ退栈，按照栈的后进先出的特性，ｐｉ压在ｐｊ的下面，理应ｐｊ先出，所以……，ｐｋ，……，ｐｉ，……，ｐｊ，……是不可能的。<br> 总结成一句话就是——当前下标大于后下标时，则后下标必定递减（或者说倒序）</p>
+<p>不能先逆序再正序，即入栈序列为12345时，出栈序列54123不合法。</p>
+<h2 id="栈的应用"><a href="#栈的应用" class="headerlink" title="栈的应用"></a>栈的应用</h2><ol>
+<li><p>数制转换<br>初始化栈<br>InitStack(S);<br>依次计算当前的d进制数，并将其压栈<br>Push(S, N % 8); N = N/d;<br>依次从栈中取出计算的结果，并输出<br>Pop(S,e);<br>删除栈 DestroyStack(S); </p>
+</li>
+<li><p>括号匹配的检验</p>
+<ol>
+<li>凡出现左括弧，则进栈；</li>
+<li>凡出现右括弧，首先检查栈是否空<br>若栈空，则表明该“右括弧”多余，<br>否则和栈顶元素比较，<br>若相匹配，则“左括弧出栈” ，<br>否则表明不匹配。</li>
+<li>表达式检验结束时：<br>若栈空，则表明表达式中匹配正确；<br>否则表明“左括弧”有余。</li>
+</ol>
+</li>
+<li><p>表达式求值</p>
+<ol>
+<li></li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/02/03/stack/" data-id="cklx0lry1000l48uc1l97dlot" data-title="栈" class="article-share-link">Share</a>
       
       
       
@@ -389,149 +531,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/search/" data-id="cklwy1jps000ij0uc3f18e6lg" data-title="查找" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-sort" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/02/03/sort/" class="article-date">
-  <time class="dt-published" datetime="2021-02-03T01:56:07.000Z" itemprop="datePublished">2021-02-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/02/03/sort/">排序</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="排序的特点"><a href="#排序的特点" class="headerlink" title="排序的特点"></a>排序的特点</h2><h3 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h3><p>在待排记录序列中，==任何两个关键字相同==的记录，用某种排序方法排序后==相对位置不变==，则称这种排<br> 序方法是稳定的，否则称为不稳定的</p>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><h3 id="直接插入"><a href="#直接插入" class="headerlink" title="直接插入"></a>直接插入</h3><p>从j=i-1,从后往前扫描，R[0]为哨兵，R[0]=R[i]</p>
-<p>比较次数+移动次数</p>
-<p>按关键码基本有序，数据量n较小</p>
-<p>==稳定==</p>
-<h3 id="折半插入"><a href="#折半插入" class="headerlink" title="折半插入"></a>折半插入</h3><p>0为哨兵，下标1到i-1为已经有序序列，i为待插入键值</p>
-<p>low=m+1,high=m-1</p>
-<p>最终low=high，再进行一次比较，确定放在前面还是后面</p>
-<p>==后移所有数据==high+1到i-1</p>
-<h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><p>缩小增量</p>
-<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>无序序列中选出key最小数据，插入到有序序列中</p>
-<p>树型选择排序，胜者树</p>
-<p>==不稳定==</p>
-<h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3><p>父节点和子节点有绝对大小关系</p>
-<p>完全二叉树（有序表表示）</p>
-<p>先构建最大堆，取最大值根结点与最后值交换，最大值已选出，不再进入排序堆，调整其他堆结构，继续选择根节点与列表中剩余值的最后一个交换，直至列表结构只剩1号位</p>
-<p>==不稳定==</p>
-<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>将最大值放于末尾</p>
-<p>两两比较，前面比后面大则交换，最终将最大值放在末尾</p>
-<p>从头开始到n-1，再重头到n-2，直到1</p>
-<p>==稳定==</p>
-<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>设置pivot，</p>
-<p>一次快速排序</p>
-<ol>
-<li>将第一个记录设置为 pivot</li>
-<li>从表的两端交替地向中间担描，直到两个指针相遇<br> 先从高端扫描<br> 找到第一个==比 pivotkey小==的记录<br> 将该记录移动到low指针指向的地方；<br> 再从低端扫描</li>
-<li>.将 pivot移动到Iow指针位置，并返回该位置</li>
-</ol>
-<p>完全排序，递归的对排序得到的左右序列[1,pivotloc-1][pivotloc+1,n]进行快速排序</p>
-<p>==不稳定==</p>
-<p>改进，选择枢轴量，3个中选择（2k+1个中选择），先排序low，high，center，将center作为pivot放于[high-1]排序，更可能选出差不多在中间的值，进行快速排序时更可能左右分别&lt;/&gt;privot</p>
-<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p>分组，递归归并</p>
-<h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><p>高位优先</p>
-<p>低位优先<br><img src="file://C:/Users/GK/Documents/Gridea/post-images/1611794750908.png"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/sort/" data-id="cklwy1jpt000lj0ucgug160ah" data-title="排序" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-stack" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/02/03/stack/" class="article-date">
-  <time class="dt-published" datetime="2021-02-03T01:56:07.000Z" itemprop="datePublished">2021-02-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/02/03/stack/">栈</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="栈的实现"><a href="#栈的实现" class="headerlink" title="栈的实现"></a>栈的实现</h2><h3 id="顺序栈"><a href="#顺序栈" class="headerlink" title="顺序栈"></a>顺序栈</h3><p>类似于线性表的顺序映象实现，指向表尾的指针可以作为栈顶指针。</p>
-<ol>
-<li>追加储存空间<br> <code>S.top = S.base + S.stacksize; //更新top指针</code><h3 id="链栈"><a href="#链栈" class="headerlink" title="链栈"></a>链栈</h3><h2 id="进栈与上溢，出栈与下溢"><a href="#进栈与上溢，出栈与下溢" class="headerlink" title="进栈与上溢，出栈与下溢"></a>进栈与上溢，出栈与下溢</h2><h2 id="栈混洗"><a href="#栈混洗" class="headerlink" title="栈混洗"></a>栈混洗</h2></li>
-</ol>
-<h3 id="求解可能的序列数"><a href="#求解可能的序列数" class="headerlink" title="求解可能的序列数"></a>求解可能的序列数</h3><p>一般情形下，我们假设进栈序列为１，２，３，……，ｎ，可能的退栈序列有$f（ｎ）$种，对此，我们可以做如下推导：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">当ｎ＝０时，ｍ（０）＝１：退栈序列为｛｝；</span><br><span class="line">当ｎ＝１时，ｍ（１）＝１：退栈序列为｛１｝；</span><br><span class="line">当ｎ＝２时，ｍ（２）＝２：</span><br><span class="line">退栈序列中１在首位，１左侧有０个数，１右侧有一个数，有ｍ（０）＊ｍ（１）种可能，１在末位，１左侧有一个数，右侧有０个数，有ｍ（１）＊ｍ（０）种，一共有ｍ（０）＊ｍ（１）＋ｍ（１）＊ｍ（０）种可能的序列。</span><br></pre></td></tr></table></figure>
-
-<p>简单的推导中不难发现，将１置于ｉ＝１……ｎ的位置，则可能的序列数为$f（ｉ－１）\times f （ｎ－ｉ）$种。<br> 总结一下：<br> 一般的，设有n个元素序号按序号１,２，……，ｎ进栈，轮流让１在退栈序列的第１，第２，……，第ｎ位，则可能的的退栈序列种数为：<br> $f（０）\times f（ｎ－１）＋f（１）\times f（ｎ－２）＋……＋f（ｎ－１）\times f（０）<br> \＝\frac{1}{n+1}\timesＣ<em>{2n}^n<br> \＝\frac{（２ｎ）（２ｎ－１）……（ｎ＋２）}{ｎ！}$<br> 不符合要求的数的特征是由左而右扫描时，必然在某一奇数位2m+1位上首先出现m+1个0的累计数和m个1的累计数，此后的2(n-m)-1位上有n-m个 1和n-m-1个0。如若把后面这2(n-m)-1位上的0和1互换，使之成为n-m个0和n-m-1个1，结果得1个由n+1个0和n-1个1组成的2n位数，即一个不合要求的数对应于一个由n+1个0和n-1个1组成的排列。<br> 反过来，任何一个由n+1个0和n-1个1组成的2n位二进制数，由于0的个数多2个，2n为偶数，故必在某一个奇数位上出现0的累计数超过1的累计数。同样在后面部分0和1互换，使之成为由n个0和n个1组成的2n位数，即n+1个0和n-1个1组成的2n位数必对应一个不符合要求的数。<br> 不合要求的2n位数与n＋1个0，n－1个1组成的排列一一对应。不符合要求方案数为$c</em>{2n}^{n+1}$</p>
-<h3 id="不可能的退栈序列"><a href="#不可能的退栈序列" class="headerlink" title="不可能的退栈序列"></a>不可能的退栈序列</h3><p>设对于初始进栈序列1，2，3，……，ｎ，利用栈得到可能的退栈序列为ｐ１，ｐ２，……，ｐｉ，……，ｐｎ，</p>
-<p>如果序号ｉ＜ｊ＜ｋ，且在进栈序列中ｐｉ＜ｐｊ＜ｐｋ，即：<br> ……，ｐｉ，……，ｐｊ，……，ｐｋ，……（ｐｉ＜ｐｊ＜ｐｋ）<br> 则……，ｐｋ，……，ｐｉ，……，ｐｊ，……就是不可能的退栈序列。</p>
-<p>因为ｐｋ在ｐｉ和ｐｊ之后进栈，又先于ｐｉ和ｐｊ退栈，按照栈的后进先出的特性，ｐｉ压在ｐｊ的下面，理应ｐｊ先出，所以……，ｐｋ，……，ｐｉ，……，ｐｊ，……是不可能的。<br> 总结成一句话就是——当前下标大于后下标时，则后下标必定递减（或者说倒序）</p>
-<p>不能先逆序再正序，即入栈序列为12345时，出栈序列54123不合法。</p>
-<h2 id="栈的应用"><a href="#栈的应用" class="headerlink" title="栈的应用"></a>栈的应用</h2><ol>
-<li><p>数制转换<br>初始化栈<br>InitStack(S);<br>依次计算当前的d进制数，并将其压栈<br>Push(S, N % 8); N = N/d;<br>依次从栈中取出计算的结果，并输出<br>Pop(S,e);<br>删除栈 DestroyStack(S); </p>
-</li>
-<li><p>括号匹配的检验</p>
-<ol>
-<li>凡出现左括弧，则进栈；</li>
-<li>凡出现右括弧，首先检查栈是否空<br>若栈空，则表明该“右括弧”多余，<br>否则和栈顶元素比较，<br>若相匹配，则“左括弧出栈” ，<br>否则表明不匹配。</li>
-<li>表达式检验结束时：<br>若栈空，则表明表达式中匹配正确；<br>否则表明“左括弧”有余。</li>
-</ol>
-</li>
-<li><p>表达式求值</p>
-<ol>
-<li></li>
-</ol>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/03/stack/" data-id="cklwy1jpt000nj0uca5441657" data-title="栈" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/03/search/" data-id="cklx0lry2000n48uc0cpt3815" data-title="查找" class="article-share-link">Share</a>
       
       
       
