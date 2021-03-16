@@ -4,15 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>static与this | Hexo</title>
+  <title>C++Debug | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="static与this">
+  <meta name="description" content="编译错误依赖问题 安装问题 链接错误作用域声明错误 static关键字​        static被引入以告知编译器，将变量存储在程序的静态存储区而非栈上空间，静态数据成员按定义出现的先后顺序依次初始化，注意静态成员嵌套时，要保证所嵌套的成员已经初始化了。消除时的顺序是初始化的反顺序。​        可以节省内存，因为它是所有对象所公有的。提高更新的时间效率，最重要的是，保存一个不随上级调用类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++Debug">
 <meta property="og:url" content="http://example.com/2021/03/01/static%E4%B8%8Ethis/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="编译错误依赖问题 安装问题 链接错误作用域声明错误 static关键字​        static被引入以告知编译器，将变量存储在程序的静态存储区而非栈上空间，静态数据成员按定义出现的先后顺序依次初始化，注意静态成员嵌套时，要保证所嵌套的成员已经初始化了。消除时的顺序是初始化的反顺序。​        可以节省内存，因为它是所有对象所公有的。提高更新的时间效率，最重要的是，保存一个不随上级调用类">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-28T16:01:15.000Z">
-<meta property="article:modified_time" content="2021-02-28T16:08:52.595Z">
+<meta property="article:modified_time" content="2021-03-16T12:16:36.539Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
@@ -86,7 +88,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      static与this
+      C++Debug
     </h1>
   
 
@@ -94,11 +96,18 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <h1 id="编译错误"><a href="#编译错误" class="headerlink" title="编译错误"></a>编译错误</h1><p>依赖问题</p>
+<p>安装问题</p>
+<h1 id="链接错误"><a href="#链接错误" class="headerlink" title="链接错误"></a>链接错误</h1><p>作用域声明错误</p>
+<h3 id="static关键字"><a href="#static关键字" class="headerlink" title="static关键字"></a>static关键字</h3><p>​        static被引入以告知编译器，将变量存储在程序的静态存储区而非栈上空<br>间，静态数据成员按定义出现的先后顺序依次初始化，注意静态成员嵌套时，要保证所嵌<br>套的成员已经初始化了。消除时的顺序是初始化的反顺序。<br>​        可以节省内存，因为它是所有对象所公有的。提高更新的时间效率，最重要的是，保存一个不随上级调用类的消亡，时刻存在的监视器，可以保存住该静态变量的内部数据，尤其是静态类。<br>  &lt;类名&gt;::&lt;静态成员名&gt; （当权限为public时）</p>
+<p>ps:<br>  (1)类的静态成员函数是属于整个类而非类的对象，所以它没有this指针，<br>这就导致了它仅能访问类的静态数据和静态成员函数。<br>  (2)不能将静态成员函数定义为虚函数。<br>  (3)由于静态成员声明于类中，操作于其外，所以对其取地址操作，就多少<br>有些特殊，变量地址是指向其数据类型的指针 ，函数地址类型是一个<br> “nonmember函数指针”。 </p>
+<p>  (4)由于静态成员函数没有this指针，所以就差不多等同于nonmember函数</p>
+<p>结果就产生了一个意想不到的好处：成为一个callback函数，使得我们得以将<br>c++和c-based x window系统结合，同时也成功的应用于线程函数身上。<br>  (5)static并没有增加程序的时空开销，相反她还缩短了子类对父类静态成<br>员的访问时间，节省了子类的内存空间。<br>  (6)静态数据成员在&lt;定义或说明&gt;时前面加关键字static。<br>  (7)静态数据成员是静态存储的，所以必须对它进行初始化。<br>  (8)静态成员初始化与一般数据成员初始化不同:<br>  初始化在类体外进行，而前面不加static，以免与一般静态变量或对象相<br>混淆；<br>  初始化时不加该成员的访问权限控制符private，public等；<br>  初始化时使用作用域运算符来标明它所属类；<br>  所以我们得出静态数据成员初始化的格式：<br>  &lt;数据类型&gt;&lt;类名&gt;::&lt;静态数据成员名&gt;=&lt;值&gt; </p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/01/static%E4%B8%8Ethis/" data-id="cklx0lry3000q48uc76vodhgr" data-title="static与this" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/03/01/static%E4%B8%8Ethis/" data-id="ckmbzdmg0000t1ouc2i4l5py0" data-title="C++Debug" class="article-share-link">Share</a>
       
       
       
@@ -174,23 +183,23 @@
       <ul>
         
           <li>
+            <a href="/2021/03/15/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA%E7%9B%B8%E5%85%B3%E6%9C%AF%E8%AF%AD/">工业相机相关术语</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/08/lattepanda%E5%AE%89%E8%A3%85ubuntu18-04%E5%85%A8%E6%95%99%E7%A8%8B/">lattepanda安装ubuntu18.04全教程</a>
+          </li>
+        
+          <li>
             <a href="/2021/03/05/k-maps/">k_maps</a>
           </li>
         
           <li>
-            <a href="/2021/03/01/static%E4%B8%8Ethis/">static与this</a>
+            <a href="/2021/03/01/static%E4%B8%8Ethis/">C++Debug</a>
           </li>
         
           <li>
             <a href="/2021/02/27/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">hexo插入图片</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/26/PKG_CONFIG/">PKG_CONFIG</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/26/c++%E4%B8%8EOOP/">C与C++初步</a>
           </li>
         
       </ul>
